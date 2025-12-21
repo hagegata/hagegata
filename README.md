@@ -20,6 +20,11 @@
 
 ---
 
+### 🗄️ Базы данных:
+
+![Microsoft SQL Server](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![1C](https://img.shields.io/badge/1C-FFD200?style=for-the-badge&logo=1C&logoColor=black)
+
 ## 📚 Обучаюсь
 
 ### 💻 Виртуализация и ОС

@@ -4,12 +4,7 @@
 ![ALT Linux](https://img.shields.io/badge/ALT%20Linux-1E3D6C?style=for-the-badge&logo=linux&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=microsoftwindows&logoColor=white)
 ![Сети](https://img.shields.io/badge/Сети-0055A4?style=for-the-badge&logo=cisco&logoColor=white)
-![Коммутаторы](https://img.shields.io/badge/Коммутаторы-0055A4?style=for-the-badge&logo=cisco&logoColor=white)
-![Пайка](https://img.shields.io/badge/Пайка-F0F0F0?style=for-the-badge&logo=solder&logoColor=black)
 ![Прокладка сетей](https://img.shields.io/badge/Прокладка%20сетей-0055A4?style=for-the-badge&logo=ethernet&logoColor=white)
 ![Администрирование](https://img.shields.io/badge/Администрирование-0055A4?style=for-the-badge&logo=systemadmin&logoColor=white)
-![Установка ПО](https://img.shields.io/badge/Установка%20ПО-0055A4?style=for-the-badge&logo=package&logoColor=white)
-![Периферия](https://img.shields.io/badge/Периферия-0055A4?style=for-the-badge&logo=printer&logoColor=white)
 ![Антивирусы](https://img.shields.io/badge/Антивирусы-0055A4?style=for-the-badge&logo=norton&logoColor=white)
-![Резервное копирование](https://img.shields.io/badge/Резервное%20копирование-0055A4?style=for-the-badge&logo=backup&logoColor=white)
-![Электробезопасность](https://img.shields.io/badge/ЭБ%20II%20гр.-FF69B4?style=for-the-badge&logo=electric&logoColor=white)
+

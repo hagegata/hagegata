@@ -20,19 +20,13 @@
 ---
 
 🔭Обучаюсь:
-
 ### 💻 Виртуализация и ОС 
-
 - [VMware Workstation Pro](https://img.shields.io/badge/VMware%20Workstation%20Pro-696C70?style=for-the-badge&logo=vmware&logoColor=white)
 - [Основы Linux](https://img.shields.io/badge/Основы%20Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-- 
 ### 🌐 Сети и Автоматизация
-
 - [Сетевые технологии](https://img.shields.io/badge/Сетевые%20технологии-0055A4?style=for-the-badge&logo=cisco&logoColor=white)
 - [Bash-скрипты](https://img.shields.io/badge/Bash--скрипты-4EAA2F?style=for-the-badge&logo=gnubash&logoColor=white)
-- 
 ### 🔄 DevOps & CI/CD
-
 - [CI/CD](https://img.shields.io/badge/CI%2FCD-2478D0?style=for-the-badge&logo=gitlab&logoColor=white)
 - [Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 - [Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)

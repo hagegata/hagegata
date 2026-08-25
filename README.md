@@ -2,15 +2,28 @@
 
 ## 🖥️ Мой стек
 
+---
+
+
 ### 🛠️ OS:
 
 ![Администрирование](https://img.shields.io/badge/Администрирование-0055A4?style=for-the-badge&logo=systemadmin&logoColor=white)
 ![ALT Linux](https://img.shields.io/badge/ALT%20Linux-1E3D6C?style=for-the-badge&logo=linux&logoColor=white)
+![Astra Linux]()
+![Ubuntu](https://img.shields.io/badge/-Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=microsoftwindows&logoColor=white)
-![Сети](https://img.shields.io/badge/Сети-0055A4?style=for-the-badge&logo=cisco&logoColor=white)
 ![Kaspersky Security Center](https://img.shields.io/badge/Kaspersky%20Security%20Center-0A3D91?style=for-the-badge&logo=kaspersky&logoColor=white)
 
 ---
+
+
+### ![Сети] (https://img.shields.io/badge/-Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white) :
+![Сетевые технологии](https://img.shields.io/badge/Сетевые%20технологии-0055A4?style=for-the-badge&logo=cisco&logoColor=white)
+![TCP/IP]
+![DNS]
+
+---
+
 
 ### 🌐 Web(junior):
 
@@ -20,28 +33,37 @@
 
 ---
 
+
 ### 🗄️ Базы данных(junior):
 
-![Microsoft SQL Server](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Microsoft SQL](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+- 
+-
 ![PostgresSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+-
+-
 ![MariaDB](https://img.shields.io/badge/-MariaDB-003545?style=flat&logo=mariadb&logoColor=white)
-
+-
+-
 ---
+
 
 ### 💻 Виртуализация:
 
 - ![VMware Workstation Pro](https://img.shields.io/badge/VMware%20Workstation%20Pro-696C70?style=for-the-badge&logo=vmware&logoColor=white)
 - ![KVM]()
-- [Hyper V] ()
+- ![Hyper V] ()
+- ![WSL]()
 
 ---
 
-### 🌐 Сети
 
-- ![Сетевые технологии](https://img.shields.io/badge/Сетевые%20технологии-0055A4?style=for-the-badge&logo=cisco&logoColor=white)
+### 🌐 Скрипты:
+
 - ![Bash-скрипты](https://img.shields.io/badge/Bash--скрипты-4EAA2F?style=for-the-badge&logo=gnubash&logoColor=white)
 
 ---
+
 
 ### 🔄 DevOps & CI/CD
 
@@ -49,4 +71,7 @@
 - ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 - ![K8s](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 - ![CI/CD](https://img.shields.io/badge/CI%2FCD-2478D0?style=for-the-badge&logo=gitlab&logoColor=white)
+
+
+  
 

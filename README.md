@@ -17,7 +17,7 @@
 ---
 
 
-### ![Сети] (https://img.shields.io/badge/-Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white) :
+### Сети:
 ![Сетевые технологии](https://img.shields.io/badge/Сетевые%20технологии-0055A4?style=for-the-badge&logo=cisco&logoColor=white)
 ![TCP/IP]
 ![DNS]

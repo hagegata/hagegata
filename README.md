@@ -32,7 +32,7 @@
 
 - ![VMware Workstation Pro](https://img.shields.io/badge/VMware%20Workstation%20Pro-696C70?style=for-the-badge&logo=vmware&logoColor=white)
 - ![KVM]()
-- Hyper V()
+- [Hyper V] ()
 
 ---
 

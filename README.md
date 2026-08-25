@@ -60,8 +60,8 @@
 
 ### 🌐 Скрипты:
 
-- ![Bash-скрипты](https://img.shields.io/badge/Bash--скрипты-4EAA2F?style=for-the-badge&logo=gnubash&logoColor=white)
-- ![Python]
+- ![Bash](https://img.shields.io/badge/Bash--скрипты-4EAA2F?style=for-the-badge&logo=gnubash&logoColor=white)
+- ![Python]()
 ---
 
 

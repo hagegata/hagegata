@@ -3,11 +3,11 @@
 ### 🧑‍💻 Системный администратор → Linux Engineer / Junior DevOps
 
 Занимаюсь администрированием Linux/Windows-инфраструктуры, автоматизацией на Bash и сопровождением корпоративных сервисов.
-Развиваю направление DevOps: Docker, CI/CD, GitHub Actions, Kubernetes и инфраструктурная автоматизация.
+Развиваюсь в направлении Linux Engineering и DevOps: контейнеризация, CI/CD, GitHub Actions, Kubernetes и инфраструктурная автоматизация.
 
 ---
 
-# 🧰 Мой технический стек
+# 🧰 Технический стек
 
 ## 🖥️ ОС и администрирование
 
@@ -18,6 +18,8 @@
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge\&logo=windows\&logoColor=white)
 ![Windows Server](https://img.shields.io/badge/Windows%20Server-0078D4?style=for-the-badge\&logo=windows-server\&logoColor=white)
 
+`Linux Administration` · `systemd` · `cron` · `package management`
+
 ---
 
 ## 🌐 Сети и инфраструктура
@@ -27,9 +29,11 @@
 ![DHCP](https://img.shields.io/badge/DHCP-0055A4?style=for-the-badge\&logo=serverfault\&logoColor=white)
 ![Active Directory](https://img.shields.io/badge/Active%20Directory-0078D4?style=for-the-badge\&logo=windows\&logoColor=white)
 ![SSSD](https://img.shields.io/badge/SSSD-CC0000?style=for-the-badge\&logo=linux\&logoColor=white)
-![Kerberos](https://img.shields.io/badge/Kerberos-333333?style=for-the-badge\&logo=apache\&logoColor=white)
+![Kerberos](https://img.shields.io/badge/Kerberos-333333?style=for-the-badge\&logo=linux\&logoColor=white)
 ![SMB/CIFS](https://img.shields.io/badge/SMB%2FCIFS-555555?style=for-the-badge\&logo=linux\&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge\&logo=nginx\&logoColor=white)
+
+`TCP/IP` · `DNS` · `DHCP` · `AD` · `SSSD` · `Kerberos` · `SMB/CIFS` · `Nginx`
 
 ---
 
@@ -42,6 +46,8 @@
 
 `Bash` · `Python` · `sed` · `grep` · `awk` · `cron` · `systemd`
 
+Автоматизирую установку и настройку ПО, конфигурацию рабочих станций, обслуживание сервисов и рутинные административные операции.
+
 ---
 
 ## 🐳 DevOps и CI/CD
@@ -49,15 +55,14 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge\&logo=docker\&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?style=for-the-badge\&logo=docker\&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge\&logo=github-actions\&logoColor=white)
-![CI/CD](https://img.shields.io/badge/CI%2FCD-161B22?style=for-the-badge\&logo=githubactions\&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge\&logo=kubernetes\&logoColor=white)
 ![containerd](https://img.shields.io/badge/containerd-575757?style=for-the-badge\&logo=containerd\&logoColor=white)
 ![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=for-the-badge\&logo=aqua\&logoColor=white)
 ![Cosign](https://img.shields.io/badge/Cosign-5C2D91?style=for-the-badge\&logo=sigstore\&logoColor=white)
 
-`Dockerfile` · `Docker Compose` · `kubeadm` · `kubectl` · `CNI`
+`Dockerfile` · `Docker Compose` · `CI/CD` · `GitHub Actions` · `GHCR` · `kubeadm` · `kubectl` · `CNI`
 
-> Kubernetes и CI/CD — лабораторная практика.
+> ℹ️ Kubernetes и CI/CD — лабораторная практика.
 
 ---
 
@@ -69,7 +74,7 @@
 ![Kaspersky](https://img.shields.io/badge/Kaspersky-006DCC?style=for-the-badge\&logo=kaspersky\&logoColor=white)
 ![GLPI](https://img.shields.io/badge/GLPI-1F6FEB?style=for-the-badge\&logo=glpi\&logoColor=white)
 
-`Zabbix Agent` · `UserParameter` · `HostMetadata` · `OVAL` · `ФСТЭК`
+`Zabbix Agent` · `UserParameter` · `HostMetadata` · `OVAL` · `ScanOval` · `ФСТЭК`
 
 ---
 
@@ -79,7 +84,7 @@
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge\&logo=redis\&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge\&logo=postgresql\&logoColor=white)
 
-`PostgreSQL` · `Redis` · `pg_dump` · `SQL`
+`PostgreSQL` · `Redis` · `SQL` · `pg_dump` · `Backup / Restore`
 
 ---
 
@@ -87,7 +92,7 @@
 
 ![VMware](https://img.shields.io/badge/VMware-607078?style=for-the-badge\&logo=vmware\&logoColor=white)
 ![KVM](https://img.shields.io/badge/KVM-666666?style=for-the-badge\&logo=linux\&logoColor=white)
-![Hyper-V](https://img.shields.io/badge/Hyper--V-0078D4?style=for-the-badge\&logo=windows\&logoColor=white)
+![Hyper--V](https://img.shields.io/badge/Hyper--V-0078D4?style=for-the-badge\&logo=windows\&logoColor=white)
 ![WSL](https://img.shields.io/badge/WSL-0D1117?style=for-the-badge\&logo=windows-terminal\&logoColor=white)
 
 ---
@@ -98,7 +103,7 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
 
-> Уровень: Junior / базовая практика.
+> Базовый / Junior уровень.
 
 ---
 
@@ -108,6 +113,7 @@
 ![CUPS](https://img.shields.io/badge/CUPS-555555?style=for-the-badge\&logo=linux\&logoColor=white)
 ![1C](https://img.shields.io/badge/1C-FFCC00?style=for-the-badge\&logo=1c\&logoColor=black)
 ![Bitrix24](https://img.shields.io/badge/Bitrix24-2FC7F7?style=for-the-badge\&logo=bitrix24\&logoColor=white)
+![Kaspersky](https://img.shields.io/badge/Kaspersky%20Security%20Center-006DCC?style=for-the-badge\&logo=kaspersky\&logoColor=white)
 
 ---
 
@@ -115,25 +121,67 @@
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge\&logo=kubernetes\&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge\&logo=ansible\&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux%20Engineering-333333?style=for-the-badge\&logo=linux\&logoColor=white)
+![Linux Engineering](https://img.shields.io/badge/Linux%20Engineering-333333?style=for-the-badge\&logo=linux\&logoColor=white)
 
-`Kubernetes` · `Ansible` · `Linux Engineering` · `Infrastructure as Code`
+`Kubernetes` · `Ansible` · `Infrastructure as Code` · `Linux Engineering`
 
 ---
 
-# 📂 Избранные репозитории
+# 🚀 Избранные проекты
 
-### 🐳 Docker / CI-CD
+## 🐍 [myflask](https://github.com/hagegata/myflask)
 
-Практика контейнеризации Python-приложений, Docker Compose и автоматизированного CI/CD через GitHub Actions.
+**Python · Flask · Docker · Docker Compose · Redis · GitHub Actions · CI/CD**
 
-### ☸️ Kubernetes
+Контейнеризированное Python-приложение для практики Docker и CI/CD.
 
-Лабораторный кластер Kubernetes: kubeadm, containerd, kubectl, Deployment, Service, ConfigMap, Secret, StatefulSet, PV/PVC.
+* Создан Docker-образ приложения.
+* Настроен Docker Compose для нескольких сервисов.
+* Добавлен Redis для хранения состояния.
+* Настроены healthcheck и контейнерное взаимодействие.
+* Реализован CI/CD pipeline через GitHub Actions.
+* Настроены публикация образа в GHCR, сканирование Trivy и подпись Cosign.
 
-### 🐚 Bash Automation
+🔗 **Repository:** [github.com/hagegata/myflask](https://github.com/hagegata/myflask)
 
-Скрипты автоматизации ALT Linux: установка ПО, настройка Zabbix, OVAL, AD/SSSD и сетевых ресурсов.
+---
+
+## ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics)
+
+**Kubernetes · kubeadm · containerd · kubectl · Linux**
+
+Лабораторный проект по изучению Kubernetes и его основных компонентов.
+
+* Развернут одновузловой Kubernetes-кластер.
+* Настроены `kubeadm` и `containerd`.
+* Созданы `Pod`, `Deployment`, `Service`, `ConfigMap`, `Secret`.
+* Изучены `StatefulSet`, `PV/PVC`.
+* Практиковалась диагностика проблем через `kubectl`.
+* Исследовалась работа сетевых CNI-плагинов.
+
+🔗 **Repository:** [github.com/hagegata/k8s-basics](https://github.com/hagegata/k8s-basics)
+
+> ℹ️ Kubernetes используется в лабораторной среде, без production-опыта.
+
+---
+
+# 📈 Что практикую
+
+```text
+Linux Administration
+        ↓
+Bash Automation
+        ↓
+Docker / Docker Compose
+        ↓
+Git / GitHub
+        ↓
+CI/CD / GitHub Actions
+        ↓
+Kubernetes
+        ↓
+Linux Engineering / DevOps
+```
 
 ---
 

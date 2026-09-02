@@ -127,41 +127,53 @@
 
 ---
 
-# 🚀 Избранные проекты
+# 🚀 Избранные проекты и кейсы
+
+## 🏢 Enterprise Automation & Security (ALT Linux)
+**Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК**
+*Коммерческий проект (Законодательное Собрание)*
+* **Проблема:** Ручная настройка рабочих мест занимала 2-3 часа, отсутствие централизованного контроля уязвимостей по ФСТЭК, проблемы с доступом к SMB-ресурсам после смены пароля.
+* **Решение:** 
+  - Разработан идемпотентный Bash-скрипт для развертывания ПО, настройки Zabbix/GLPI и OVAL-сканирования.
+  - Реализован `UserParameter` в Zabbix для парсинга отчетов ScanOval и отправки метрик уязвимостей.
+  - Настроена интеграция с AD через SSSD/Kerberos с принудительным обновлением тикетов и корректным монтированием SMB.
+* **Результат:** Время подготовки рабочего места сократилось **с 2-3 часов до 20-30 минут**. Обеспечен автоматический аудит безопасности.
+
+---
+
+## 🛠️ Immich Infrastructure Rescue
+**Linux · Docker/Snap · PostgreSQL · Bash**
+* **Проблема:** Сервис падал из-за OOM Killer, переполнения корневого раздела (88%) и `schema drift` в PostgreSQL после обновлений.
+* **Решение:** 
+  - Проведен capacity management: перенос данных PostgreSQL и медиа-библиотеки (390 ГБ) на отдельный раздел через симлинки.
+  - Устранен `schema drift`: ручная очистка дубликатов через `ctid` и восстановление первичных ключей.
+  - Митигация OOM: добавлен swap-файл (4 ГБ) и снижен параллелизм ресурсоемких ML-задач.
+  - Настроены cron-задачи для ротации логов и резервного копирования БД с ротацией.
+* **Результат:** Стабильная работа сервиса без ручного вмешательства, освобождено 25+ ГБ на системном диске.
+
+---
 
 ## 🐍 [myflask](https://github.com/hagegata/myflask)
-
-**Python · Flask · Docker · Docker Compose · Redis · GitHub Actions · CI/CD**
-
-Контейнеризированное Python-приложение для практики Docker и CI/CD.
-
-* Создан Docker-образ приложения.
-* Настроен Docker Compose для нескольких сервисов.
-* Добавлен Redis для хранения состояния.
-* Настроены healthcheck и контейнерное взаимодействие.
-* Реализован CI/CD pipeline через GitHub Actions.
-* Настроены публикация образа в GHCR, сканирование Trivy и подпись Cosign.
+**Python · Flask · Docker · GitHub Actions · CI/CD**
+*Лабораторный проект для отработки практик Secure Software Supply Chain.*
+* 🐳 **Контейнеризация:** Оптимизированный `Dockerfile` (multi-stage) и `docker-compose.yml` с healthcheck'ами.
+* 🔄 **CI/CD:** Pipeline в GitHub Actions: сборка → тестирование → сканирование уязвимостей (**Trivy**) → подпись образа (**Cosign**) → публикация в GHCR.
+* 💡 **Ключевой инсайт:** Разобрался, как интегрировать инструменты безопасности в процесс разработки, не замедляя деплой, но гарантируя целостность образа.
 
 🔗 **Repository:** [github.com/hagegata/myflask](https://github.com/hagegata/myflask)
 
 ---
 
 ## ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics)
+**Kubernetes · kubeadm · containerd · kubectl**
+*Лабораторный стенд для глубокого понимания архитектуры Kubernetes "под капотом".*
+* ⚙️ **Инфраструктура:** Развернут одновузловой кластер с нуля на ALT Linux через `kubeadm` и `containerd`.
+* 📦 **Объекты:** Написаны манифесты для `Deployment`, `Service`, `ConfigMap`, `Secret`, `StatefulSet` с `PersistentVolumeClaim`.
+* 🔍 **Troubleshooting:** На практике разобрался с диагностикой проблем: анализ событий через `kubectl describe`, решение проблем с сетевыми плагинами (CNI Calico/Flannel) и правами доступа.
 
-**Kubernetes · kubeadm · containerd · kubectl · Linux**
-
-Лабораторный проект по изучению Kubernetes и его основных компонентов.
-
-* Развернут одновузловой Kubernetes-кластер.
-* Настроены `kubeadm` и `containerd`.
-* Созданы `Pod`, `Deployment`, `Service`, `ConfigMap`, `Secret`.
-* Изучены `StatefulSet`, `PV/PVC`.
-* Практиковалась диагностика проблем через `kubectl`.
-* Исследовалась работа сетевых CNI-плагинов.
+> ⚠️ **Статус:** Проект создан в образовательных целях. Production-опыта управления кластерами пока нет, но я понимаю принципы их работы и готов быстро учиться на реальных задачах.
 
 🔗 **Repository:** [github.com/hagegata/k8s-basics](https://github.com/hagegata/k8s-basics)
-
-> ℹ️ Kubernetes используется в лабораторной среде, без production-опыта.
 
 ---
 

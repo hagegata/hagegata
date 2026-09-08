@@ -117,114 +117,7 @@
 
 ---
 
-# 🚀 Сейчас изучаю
-
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
-![Linux Engineering](https://img.shields.io/badge/Linux%20Engineering-333333?style=for-the-badge&logo=linux&logoColor=white)
-
-`Kubernetes` · `Ansible` · `Infrastructure as Code` · `Linux Engineering`
-
----
-
-# 🚀 Избранные проекты и кейсы
-
-## 🏢 Enterprise Automation & Security
-
-**Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК**
-
-*Коммерческий проект — Законодательное Собрание Кировской области.*
-
-### Проблема
-Ручная подготовка рабочих мест занимала 2–3 часа. Требовалась автоматизация установки ПО, мониторинга, аудита безопасности и доступа к SMB-ресурсам.
-
-### Решение
-
-- Разработал Bash-скрипт автоматизированного развертывания ALT Linux.
-- Автоматизировал установку ПО, настройку Zabbix Agent, GLPI, UrBackup и OVAL-сканирования.
-- Реализовал `UserParameter` в Zabbix для передачи метрик OVAL.
-- Настроил интеграцию Linux с Active Directory через SSSD/Kerberos.
-- Автоматизировал подключение SMB-ресурсов.
-
-### Результат
-
-**Время подготовки рабочего места сокращено с 2–3 часов до 20–30 минут.**
-
----
-
-## 🛠️ Immich Infrastructure Rescue
-
-**Linux · Docker/Snap · PostgreSQL · Bash**
-
-### Проблема
-
-Сервис падал из-за OOM Killer, переполнения корневого раздела и проблем со схемой PostgreSQL после обновлений.
-
-### Решение
-
-- Перенёс данные PostgreSQL и медиабиблиотеку на отдельный раздел.
-- Перенёс **390 ГБ** фотобиблиотеки без изменения путей в БД.
-- Устранил PostgreSQL `schema drift` и восстановил первичные ключи.
-- Добавил **4 ГБ swap** и снизил параллелизм ресурсоёмких задач.
-- Настроил автоматическое резервное копирование PostgreSQL и очистку логов.
-
-### Результат
-
-Заполнение корневого раздела снижено **с 88% до 21%**, сервис стабилизирован.
-
----
-
-## 🐍 [myflask](https://github.com/hagegata/myflask)
-
-**Python · Flask · Docker · Docker Compose · GitHub Actions · CI/CD**
-
-*Лабораторный проект для практики контейнеризации и CI/CD.*
-
-### Реализовано
-
-- Разработан `Dockerfile` для Python-приложения.
-- Настроен `docker-compose.yml` для нескольких сервисов.
-- Подключён Redis.
-- Настроены healthcheck и взаимодействие контейнеров.
-- Создан CI/CD pipeline в GitHub Actions.
-- Реализованы сборка, тестирование и публикация Docker-образа.
-- Настроено сканирование образа через **Trivy**.
-- Реализована подпись образа через **Cosign**.
-- Образ публикуется в **GHCR**.
-
-🔗 **Repository:** [github.com/hagegata/myflask](https://github.com/hagegata/myflask)
-
----
-
-## ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics)
-
-**Kubernetes · kubeadm · containerd · kubectl**
-
-*Лабораторный стенд для практического изучения архитектуры и основных компонентов Kubernetes.*
-
-### Реализовано
-
-- Развёрнут одновузловой Kubernetes-кластер на ALT Linux.
-- Настроены `kubeadm` и `containerd`.
-- Созданы манифесты:
-  - `Pod`
-  - `Deployment`
-  - `Service`
-  - `ConfigMap`
-  - `Secret`
-  - `StatefulSet`
-  - `PV/PVC`
-- Выполнялась диагностика через `kubectl`.
-- Исследовалась работа CNI-плагинов **Calico** и **Flannel**.
-- Разбирались проблемы сетевого взаимодействия и запуска Pod.
-
-> ⚠️ **Статус:** лабораторный проект. Production-опыта управления Kubernetes-кластерами нет.
-
-🔗 **Repository:** [github.com/hagegata/k8s-basics](https://github.com/hagegata/k8s-basics)
-
----
-
-## 📚 Учебный план и прогресс
+# 📚 Учебный план и прогресс
 
 Системный план изучения DevOps-инструментов. Отмечаю пройденные модули.
 
@@ -247,6 +140,134 @@
 
 ---
 
+# 🚀 Избранные проекты и кейсы
+
+## 🏢 Enterprise Automation & Security
+
+**Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК**
+
+*Коммерческий проект — Законодательное Собрание Кировской области.*
+
+### Проблема
+Ручная подготовка рабочих мест занимала 2–3 часа. Требовалась автоматизация установки ПО, мониторинга, аудита безопасности и доступа к SMB-ресурсам.
+
+### Решение
+- Разработал Bash-скрипт автоматизированного развертывания ALT Linux.
+- Автоматизировал установку ПО, настройку Zabbix Agent, GLPI, UrBackup и OVAL-сканирования.
+- Реализовал `UserParameter` в Zabbix для передачи метрик OVAL.
+- Настроил интеграцию Linux с Active Directory через SSSD/Kerberos.
+- Автоматизировал подключение SMB-ресурсов.
+
+### Результат
+**Время подготовки рабочего места сокращено с 2–3 часов до 20–30 минут.**
+
+---
+
+## 🛠️ Immich Infrastructure Rescue
+
+**Linux · Docker/Snap · PostgreSQL · Bash**
+
+### Проблема
+Сервис падал из-за OOM Killer, переполнения корневого раздела и проблем со схемой PostgreSQL после обновлений.
+
+### Решение
+- Перенёс данные PostgreSQL и медиабиблиотеку на отдельный раздел.
+- Перенёс **390 ГБ** фотобиблиотеки без изменения путей в БД.
+- Устранил PostgreSQL `schema drift` и восстановил первичные ключи.
+- Добавил **4 ГБ swap** и снизил параллелизм ресурсоёмких задач.
+- Настроил автоматическое резервное копирование PostgreSQL и очистку логов.
+
+### Результат
+Заполнение корневого раздела снижено **с 88% до 21%**, сервис стабилизирован.
+
+---
+
+## 🐳 Docker & Docker Compose
+
+**Docker · Dockerfile · Multi-stage Build · Compose · Volumes · Networks · Healthcheck**
+
+*Практическое применение контейнеризации в лабораторных и производственных сценариях.*
+
+### Навыки
+
+- Написание `Dockerfile` (включая **multi-stage build** для уменьшения размера образа).
+- Работа с **Docker Compose**: описание многоконтейнерных приложений, настройка сетей, томов, переменных окружения.
+- Настройка **healthcheck** для контроля доступности сервисов.
+- Ограничение ресурсов: `--memory`, `--cpus`, `--pids-limit`.
+- Управление томами: создание, бэкап, восстановление.
+- Работа с сетями: `bridge`, `host`, `none`, пользовательские сети, service discovery.
+- Безопасность контейнеров: запуск от не-root, `cap_drop`, `read_only`, сканирование **Trivy**, подпись **Cosign**.
+- Интеграция Docker с **CI/CD** и публикация образов в **GHCR**.
+
+> Навыки подтверждены в лабораторных проектах и задачах по спасению сервисов (Immich).
+
+---
+
+## 🔧 Git: управление версиями и практическое применение
+
+**Git · GitHub · Branching · Merge/Rebase · Workflow**
+
+*Система контроля версий, используемая во всех проектах.*
+
+### Навыки
+- Инициализация репозиториев, коммиты, работа с историей.
+- Ветвление, разрешение конфликтов, `rebase`, `cherry-pick`.
+- Настройка SSH-аутентификации для GitHub.
+- Ведение `README.md`, `WORKLOG.md` и документации.
+- Отработка командной разработки через Pull Request.
+
+> Навыки Git подтверждены во всех лабораторных проектах и коммерческой автоматизации.
+
+---
+
+## 🐍 [myflask](https://github.com/hagegata/myflask)
+
+**Python · Flask · Docker · Docker Compose · GitHub Actions · CI/CD**
+
+*Лабораторный проект для практики контейнеризации и CI/CD.*
+
+### Реализовано
+- Разработан `Dockerfile` для Python-приложения.
+- Настроен `docker-compose.yml` для нескольких сервисов.
+- Подключён Redis.
+- Настроены healthcheck и взаимодействие контейнеров.
+- Создан CI/CD pipeline в GitHub Actions.
+- Реализованы сборка, тестирование и публикация Docker-образа.
+- Настроено сканирование образа через **Trivy**.
+- Реализована подпись образа через **Cosign**.
+- Образ публикуется в **GHCR**.
+
+🔗 **Repository:** [github.com/hagegata/myflask](https://github.com/hagegata/myflask)
+
+---
+
+## ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics)
+
+**Kubernetes · kubeadm · containerd · kubectl**
+
+*Лабораторный стенд для практического изучения архитектуры и основных компонентов Kubernetes.*
+
+### Реализовано
+- Развёрнут одновузловой Kubernetes-кластер на ALT Linux.
+- Настроены `kubeadm` и `containerd`.
+- Созданы манифесты:
+  - `Pod`
+  - `Deployment`
+  - `Service`
+  - `ConfigMap`
+  - `Secret`
+  - `StatefulSet`
+  - `PV/PVC`
+- Выполнялась диагностика через `kubectl`.
+- Исследовалась работа CNI-плагинов **Calico** и **Flannel**.
+- Разбирались проблемы сетевого взаимодействия и запуска Pod.
+
+> ⚠️ **Статус:** лабораторный проект. Production-опыта управления Kubernetes-кластерами нет.
+
+🔗 **Repository:** [github.com/hagegata/k8s-basics](https://github.com/hagegata/k8s-basics)
+
+---
+
 ## 🛠️ [linux-automation](https://github.com/hagegata/linux-automation)
 
 **Bash · CIFS · Kerberos · Kubernetes · AD/SSSD · ALT Linux · Автоматизация**
@@ -254,7 +275,6 @@
 *Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux.*
 
 ### Содержит:
-
 - **autoinstall** — автоматизация развертывания рабочих станций (установка ПО, настройка Zabbix, OVAL-сканирование).
 - **cifs-mount** — автоматическое монтирование SMB/CIFS-шар с Kerberos-аутентификацией, создание русскоязычных симлинков и закладок в Caja.
 - **k8s-install** — установка Kubernetes и траблшутинг (Flannel, TLS, порты и др.).

@@ -226,17 +226,16 @@
 
 ## 🛠️ [linux-automation](https://github.com/hagegata/linux-automation)
 
-**Bash · CIFS · Kerberos · ALT Linux · Автоматизация**
+**Bash · CIFS · Kerberos · Kubernetes · AD/SSSD · ALT Linux · Автоматизация**
 
 *Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux.*
 
-### Реализовано
+### Содержит:
 
-- Автоматическое монтирование сетевых SMB/CIFS-шар с аутентификацией через Kerberos.
-- Создание русскоязычных симлинков и закладок в файловом менеджере Caja.
-- Настройка автозапуска монтирования при входе пользователя.
-- Добавление cron-задачи для периодического обновления Kerberos-тикета.
-- Ведение логов для диагностики.
+- **autoinstall** — автоматизация развертывания рабочих станций (установка ПО, настройка Zabbix, OVAL-сканирование).
+- **cifs-mount** — автоматическое монтирование SMB/CIFS-шар с Kerberos-аутентификацией, создание русскоязычных симлинков и закладок в Caja.
+- **k8s-install** — установка Kubernetes и траблшутинг (Flannel, TLS, порты и др.).
+- **ad-fix** — диагностика и исправление интеграции с Active Directory (SSSD/Winbind, id_max, кэш).
 
 🔗 **Repository:** [github.com/hagegata/linux-automation](https://github.com/hagegata/linux-automation)
 

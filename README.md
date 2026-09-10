@@ -68,13 +68,16 @@
 
 ## 📊 Мониторинг и информационная безопасность
 
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Node Exporter](https://img.shields.io/badge/Node%20Exporter-333333?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Zabbix](https://img.shields.io/badge/Zabbix-D40000?style=for-the-badge&logo=zabbix&logoColor=white)
 ![OVAL](https://img.shields.io/badge/OVAL-333333?style=for-the-badge&logo=linux&logoColor=white)
 ![ScanOval](https://img.shields.io/badge/ScanOval-0055A4?style=for-the-badge&logo=security&logoColor=white)
 ![Kaspersky](https://img.shields.io/badge/Kaspersky-006DCC?style=for-the-badge&logo=kaspersky&logoColor=white)
 ![GLPI](https://img.shields.io/badge/GLPI-1F6FEB?style=for-the-badge&logo=glpi&logoColor=white)
 
-`Zabbix Agent` · `UserParameter` · `HostMetadata` · `OVAL` · `ScanOval` · `ФСТЭК`
+`Prometheus` · `PromQL` · `Grafana` · `Node Exporter` · `Zabbix Agent` · `UserParameter` · `OVAL` · `ScanOval` · `ФСТЭК`
 
 ---
 
@@ -241,6 +244,27 @@
 
 ---
 
+## 📊 [monitoring](https://github.com/hagegata/monitoring)
+
+**Prometheus · Grafana · Node Exporter · Docker Compose**
+
+*Стек мониторинга для сбора и визуализации метрик хоста ALT Linux.*
+
+### Реализовано
+- Развёрнут **Prometheus** для сбора метрик.
+- Настроен **Node Exporter** для метрик ОС (CPU, память, диск).
+- Подключён **Grafana** как источник визуализации.
+- Создан дашборд **Node Metrics** с панелями:
+  - CPU Usage (PromQL: `rate` + фильтр по `mode="idle"`)
+  - Memory Usage
+  - Disk Usage (root)
+  - Load Average
+- Все сервисы работают в `network_mode: host` (обход проблемы с портами на ALT Linux).
+
+🔗 **Repository:** [github.com/hagegata/monitoring](https://github.com/hagegata/monitoring)
+
+---
+
 ## ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics)
 
 **Kubernetes · kubeadm · containerd · kubectl**
@@ -298,5 +322,7 @@ Git / GitHub
 CI/CD / GitHub Actions
         ↓
 Kubernetes
+        ↓
+Monitoring / Prometheus / Grafana
         ↓
 Linux Engineering / DevOps

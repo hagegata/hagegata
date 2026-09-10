@@ -308,32 +308,45 @@
 
 ---
 
-## 🗺️ Карта технологий
+flowchart LR
+    subgraph Linux["🖥️ Linux Administration"]
+        direction TB
+        Core[Ядро и системные вызовы]
+        Net[Сети и маршрутизация]
+        Fs[Файловые системы]
+    end
 
-```mermaid
-architecture-beta
-    group linux(cloud)[Linux Administration]
-    group automation(cloud)[Automation]
-    group containers(cloud)[Containers & CI/CD]
-    group orchestration(cloud)[Orchestration]
-    group observability(cloud)[Observability]
+    subgraph Automation["⚙️ Автоматизация"]
+        direction TB
+        Bash[Bash / Python]
+        Git[Git / GitHub]
+    end
 
-    service bash(server)[Bash] in automation
-    service git(server)[Git] in automation
-    service docker(server)[Docker] in containers
-    service cicd(server)[GitHub Actions] in containers
-    service k8s(server)[Kubernetes] in orchestration
-    service prometheus(server)[Prometheus] in observability
-    service grafana(server)[Grafana] in observability
+    subgraph Containers["📦 Контейнеризация"]
+        direction TB
+        Docker[Docker / Compose]
+        CICD[CI/CD / GitHub Actions]
+    end
 
-    junction j1 in linux
-    junction j2 in automation
+    subgraph Orchestration["☸️ Оркестрация"]
+        direction TB
+        K8s[Kubernetes / kubeadm]
+    end
 
-    linux:R -- L:j1
-    j1:R -- L:automation
-    automation:R -- L:containers
-    containers:R -- L:orchestration
-    orchestration:R -- L:observability
+    subgraph Observability["📊 Наблюдаемость"]
+        direction TB
+        Prom[Prometheus]
+        Graf[Grafana]
+    end
+
+    Linux --> Automation
+    Automation --> Containers
+    Containers --> Orchestration
+    Orchestration --> Observability
+
+    Core -.-> Docker
+    Net -.-> K8s
+    Fs -.-> Prom
 
 ```
 

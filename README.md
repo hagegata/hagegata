@@ -308,28 +308,6 @@
 
 ---
 
-# 📈 Что практикую
-
-```text
-Linux Administration
-        ↓
-Bash Automation
-        ↓
-Docker / Docker Compose
-        ↓
-Git / GitHub
-        ↓
-CI/CD / GitHub Actions
-        ↓
-Kubernetes
-        ↓
-Monitoring / Prometheus / Grafana
-        ↓
-Linux Engineering / DevOps
-
-
----
-
 ## 🗺️ Карта технологий
 
 ```mermaid
@@ -356,4 +334,24 @@ architecture-beta
     automation:R -- L:containers
     containers:R -- L:orchestration
     orchestration:R -- L:observability
+
 ```
+
+# 📈 Что практикую
+
+```text
+Linux Administration
+        ↓
+Bash Automation
+        ↓
+Docker / Docker Compose
+        ↓
+Git / GitHub
+        ↓
+CI/CD / GitHub Actions
+        ↓
+Kubernetes
+        ↓
+Monitoring / Prometheus / Grafana
+        ↓
+Linux Engineering / DevOps

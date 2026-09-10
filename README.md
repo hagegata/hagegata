@@ -120,6 +120,52 @@
 
 ---
 
+# 🗺️ Карта технологий
+
+```mermaid
+flowchart LR
+    subgraph Linux["🖥️ Linux Administration"]
+        direction TB
+        Core[Ядро и системные вызовы]
+        Net[Сети и маршрутизация]
+        Fs[Файловые системы]
+    end
+
+    subgraph Automation["⚙️ Автоматизация"]
+        direction TB
+        Bash[Bash / Python]
+        Git[Git / GitHub]
+    end
+
+    subgraph Containers["📦 Контейнеризация"]
+        direction TB
+        Docker[Docker / Compose]
+        CICD[CI/CD / GitHub Actions]
+    end
+
+    subgraph Orchestration["☸️ Оркестрация"]
+        direction TB
+        K8s[Kubernetes / kubeadm]
+    end
+
+    subgraph Observability["📊 Наблюдаемость"]
+        direction TB
+        Prom[Prometheus]
+        Graf[Grafana]
+    end
+
+    Linux --> Automation
+    Automation --> Containers
+    Containers --> Orchestration
+    Orchestration --> Observability
+
+    Core -.-> Docker
+    Net -.-> K8s
+    Fs -.-> Prom
+```
+
+---
+
 # 📚 Учебный план и прогресс
 
 Системный план изучения DevOps-инструментов. Отмечаю пройденные модули.
@@ -192,7 +238,6 @@
 *Практическое применение контейнеризации в лабораторных и производственных сценариях.*
 
 ### Навыки
-
 - Написание `Dockerfile` (включая **multi-stage build** для уменьшения размера образа).
 - Работа с **Docker Compose**: описание многоконтейнерных приложений, настройка сетей, томов, переменных окружения.
 - Настройка **healthcheck** для контроля доступности сервисов.
@@ -308,63 +353,21 @@
 
 ---
 
-flowchart LR
-    subgraph Linux["🖥️ Linux Administration"]
-        direction TB
-        Core[Ядро и системные вызовы]
-        Net[Сети и маршрутизация]
-        Fs[Файловые системы]
-    end
+# 📈 Как я учусь
 
-    subgraph Automation["⚙️ Автоматизация"]
-        direction TB
-        Bash[Bash / Python]
-        Git[Git / GitHub]
-    end
-
-    subgraph Containers["📦 Контейнеризация"]
-        direction TB
-        Docker[Docker / Compose]
-        CICD[CI/CD / GitHub Actions]
-    end
-
-    subgraph Orchestration["☸️ Оркестрация"]
-        direction TB
-        K8s[Kubernetes / kubeadm]
-    end
-
-    subgraph Observability["📊 Наблюдаемость"]
-        direction TB
-        Prom[Prometheus]
-        Graf[Grafana]
-    end
-
-    Linux --> Automation
-    Automation --> Containers
-    Containers --> Orchestration
-    Orchestration --> Observability
-
-    Core -.-> Docker
-    Net -.-> K8s
-    Fs -.-> Prom
-
-```
-
-# 📈 Что практикую
+Осваиваю DevOps-стек **параллельно и по спирали**: беру тему, углубляюсь, возвращаюсь к пройденному с новым контекстом.
 
 ```text
-Linux Administration
-        ↓
-Bash Automation
-        ↓
-Docker / Docker Compose
-        ↓
-Git / GitHub
-        ↓
-CI/CD / GitHub Actions
-        ↓
-Kubernetes
-        ↓
-Monitoring / Prometheus / Grafana
-        ↓
-Linux Engineering / DevOps
+┌──────────────────────────────────────────────────────────┐
+│                  DevOps / Linux Engineering              │
+├──────────────────────────────────────────────────────────┤
+│   Linux Administration    Docker / Compose               │
+│   Bash / Python           Kubernetes / kubeadm           │
+│   Git / GitHub            CI/CD / GitHub Actions         │
+│   Networking              Prometheus / Grafana           │
+│   Kerberos / SSSD         Zabbix / OVAL                  │
+│   PostgreSQL / Redis      IaC / Cloud / DevSecOps        │
+├──────────────────────────────────────────────────────────┤
+│   🢁 темы изучаю в связке, возвращаюсь и углубляю         │
+└──────────────────────────────────────────────────────────┘
+```

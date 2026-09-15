@@ -276,7 +276,17 @@ flowchart LR
 
 ## 🐍 [myflask](https://github.com/hagegata/myflask)
 
-**Python · Flask · Docker · Docker Compose · GitHub Actions · CI/CD**
+[![CI](https://github.com/hagegata/myflask/actions/workflows/docker-build.yml/badge.svg)](https://github.com/hagegata/myflask/actions/workflows/docker-build.yml)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat-square&logo=aqua&logoColor=white)
+![Cosign](https://img.shields.io/badge/Cosign-5C2D91?style=flat-square&logo=sigstore&logoColor=white)
+![GHCR](https://img.shields.io/badge/GHCR-181717?style=flat-square&logo=github&logoColor=white)
 
 *Лабораторный проект для практики контейнеризации и CI/CD.*
 
@@ -297,7 +307,10 @@ flowchart LR
 
 ## ⚙️ [jenkins-lab](https://github.com/hagegata/jenkins-lab)
 
-**Jenkins · Docker · Pipeline · CI/CD**
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Pipeline](https://img.shields.io/badge/Pipeline-D24939?style=flat-square&logo=jenkins&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-2478D0?style=flat-square&logo=gitlab&logoColor=white)
 
 *Лабораторный стенд для изучения Jenkins CI/CD.*
 
@@ -317,7 +330,11 @@ flowchart LR
 
 ## 📊 [monitoring](https://github.com/hagegata/monitoring)
 
-**Prometheus · Alertmanager · Grafana · Node Exporter · Docker Compose**
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+![Alertmanager](https://img.shields.io/badge/Alertmanager-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Node Exporter](https://img.shields.io/badge/Node%20Exporter-333333?style=flat-square&logo=prometheus&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 *Стек мониторинга для сбора, визуализации и алертинга метрик хоста ALT Linux.*
 
@@ -341,7 +358,12 @@ flowchart LR
 
 ## ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics)
 
-**Kubernetes · kubeadm · containerd · kubectl**
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![kubeadm](https://img.shields.io/badge/kubeadm-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![containerd](https://img.shields.io/badge/containerd-575757?style=flat-square&logo=containerd&logoColor=white)
+![kubectl](https://img.shields.io/badge/kubectl-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Calico](https://img.shields.io/badge/Calico-F76C00?style=flat-square&logo=projectcalico&logoColor=white)
+![Flannel](https://img.shields.io/badge/Flannel-333333?style=flat-square&logo=kubernetes&logoColor=white)
 
 *Лабораторный стенд для практического изучения архитектуры и основных компонентов Kubernetes.*
 
@@ -361,7 +383,12 @@ flowchart LR
 
 ## 🛠️ [linux-automation](https://github.com/hagegata/linux-automation)
 
-**Bash · CIFS · Kerberos · Kubernetes · AD/SSSD · ALT Linux · Автоматизация**
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![ALT Linux](https://img.shields.io/badge/ALT%20Linux-1E3D6C?style=flat-square&logo=linux&logoColor=white)
+![CIFS](https://img.shields.io/badge/CIFS-555555?style=flat-square&logo=linux&logoColor=white)
+![Kerberos](https://img.shields.io/badge/Kerberos-333333?style=flat-square&logo=linux&logoColor=white)
+![SSSD](https://img.shields.io/badge/SSSD-CC0000?style=flat-square&logo=linux&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
 *Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux.*
 

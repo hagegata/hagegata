@@ -3,9 +3,9 @@
 ### 🧑‍💻 Системный администратор → Linux Engineer / Junior DevOps
 
 Занимаюсь администрированием Linux/Windows-инфраструктуры, автоматизацией на Bash и сопровождением корпоративных сервисов.
-Развиваюсь в направлении Linux Engineering и DevOps: контейнеризация, CI/CD, GitHub Actions, Jenkins, Kubernetes и мониторинг.
+Развиваюсь в направлении Linux Engineering и DevOps: контейнеризация, CI/CD, GitHub Actions, Jenkins, Ansible, Kubernetes и мониторинг.
 
-📄 **Резюме:** [hh](https://hh.ru/resume/3035d41cff10607a400039ed1f32467a416956)
+📄 **Резюме:** [hh.ru](https://hh.ru/resume/3035d41cff10607a400039ed1f32467a416956)
 
 ---
 
@@ -56,10 +56,11 @@
 
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-`Bash` · `Python` · `sed` · `grep` · `awk` · `cron` · `systemd`
+`Bash` · `Python` · `Ansible` · `Jinja2` · `sed` · `grep` · `awk` · `cron` · `systemd`
 
 Автоматизирую установку и настройку ПО, конфигурацию рабочих станций, обслуживание сервисов и рутинные административные операции.
 
@@ -83,7 +84,6 @@
 ---
 
 ## 📊 Мониторинг и информационная безопасность
-[![Monitoring CI](https://github.com/hagegata/monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/hagegata/monitoring/actions/workflows/ci.yml)
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
@@ -152,6 +152,7 @@ flowchart LR
     subgraph Automation["⚙️ Автоматизация"]
         direction TB
         Bash[Bash / Python]
+        Ansible[Ansible / Jinja2]
         Git[Git / GitHub]
     end
 
@@ -198,10 +199,11 @@ flowchart LR
 | Git / GitHub | ✅ Освоено |
 | Docker / Docker Compose | ✅ Освоено |
 | Bash-скрипты | ✅ Освоено |
+| Ansible / IaC | ✅ Освоено |
 | CI/CD: GitHub Actions, Jenkins | 🔄 Активно применяю |
 | Monitoring: Prometheus, Grafana, Alertmanager | 🔄 Активно применяю |
 | Kubernetes | 🔄 В работе |
-| IaC: Ansible, Terraform | ⬜ В планах |
+| Terraform | ⬜ В планах |
 | Cloud: Yandex, VK, AWS | ⬜ В планах |
 | DevSecOps | ⬜ В планах |
 | Databases: PostgreSQL, Redis | 🔄 В работе |
@@ -346,6 +348,27 @@ flowchart LR
 
 ---
 
+## ⚙️ [ansible-lab](https://github.com/hagegata/ansible-lab)
+
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=flat-square&logo=jinja&logoColor=white)
+![Vault](https://img.shields.io/badge/Ansible%20Vault-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![ALT Linux](https://img.shields.io/badge/ALT%20Linux-1E3D6C?style=flat-square&logo=linux&logoColor=white)
+
+*Pet-проект: автоматизация настройки сервисов через Ansible*
+
+### Реализовано
+- Inventory, playbooks, variables.
+- Roles для структурирования кода (`roles/nginx`).
+- Jinja2-шаблоны для генерации конфигов.
+- Handlers и `notify` — перезапуск сервиса только при изменении.
+- Ansible Vault для шифрования секретов.
+- **Идемпотентность**: повторный запуск даёт `changed=0`.
+
+🔗 **Repository:** [github.com/hagegata/ansible-lab](https://github.com/hagegata/ansible-lab)
+
+---
+
 ## ⚙️ [jenkins-lab](https://github.com/hagegata/jenkins-lab)
 
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
@@ -370,6 +393,7 @@ flowchart LR
 ---
 
 ## 📊 [monitoring](https://github.com/hagegata/monitoring)
+
 [![Monitoring CI](https://github.com/hagegata/monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/hagegata/monitoring/actions/workflows/ci.yml)
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)

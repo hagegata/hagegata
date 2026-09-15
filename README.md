@@ -3,7 +3,22 @@
 ### 🧑‍💻 Системный администратор → Linux Engineer / Junior DevOps
 
 Занимаюсь администрированием Linux/Windows-инфраструктуры, автоматизацией на Bash и сопровождением корпоративных сервисов.
-Развиваюсь в направлении Linux Engineering и DevOps: контейнеризация, CI/CD, GitHub Actions, Jenkins, Kubernetes, мониторинг и инфраструктурная автоматизация.
+Развиваюсь в направлении Linux Engineering и DevOps: контейнеризация, CI/CD, GitHub Actions, Jenkins, Kubernetes и мониторинг.
+
+📄 **Резюме:** [hh.ru/resume/ваш_id](https://hh.ru/resume/ваш_id)
+
+---
+
+## 🎯 Ищу
+
+Позицию **Junior DevOps / Linux Engineer**, где смогу применять:
+
+- Linux-администрирование и автоматизацию (Bash, Ansible)
+- Контейнеризацию и CI/CD (Docker, GitHub Actions, Jenkins)
+- Мониторинг (Prometheus, Grafana, Alertmanager)
+- Kubernetes (базовый уровень)
+
+Формат: удалённо или гибрид. Готов к обучению и быстрому росту.
 
 ---
 
@@ -63,7 +78,7 @@
 
 `Dockerfile` · `Docker Compose` · `CI/CD` · `GitHub Actions` · `Jenkins` · `Pipeline` · `GHCR` · `kubeadm` · `kubectl` · `CNI`
 
-> ℹ️ Kubernetes и CI/CD — лабораторная практика.
+> ℹ️ Kubernetes и CI/CD — практический опыт в pet-проектах.
 
 ---
 
@@ -201,7 +216,7 @@ flowchart LR
 
 **Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК**
 
-*Коммерческий проект — Законодательное Собрание Кировской области.*
+*Коммерческий проект — Законодательное Собрание Кировской области*
 
 ### Проблема
 Ручная подготовка рабочих мест занимала 2–3 часа. Требовалась автоматизация установки ПО, мониторинга, аудита безопасности и доступа к SMB-ресурсам.
@@ -241,7 +256,7 @@ flowchart LR
 
 **Docker · Dockerfile · Multi-stage Build · Compose · Volumes · Networks · Healthcheck**
 
-*Практическое применение контейнеризации в лабораторных и производственных сценариях.*
+*Практическое применение контейнеризации в pet-проектах и производственных сценариях*
 
 ### Навыки
 - Написание `Dockerfile` (включая **multi-stage build** для уменьшения размера образа).
@@ -253,7 +268,7 @@ flowchart LR
 - Безопасность контейнеров: запуск от не-root, `cap_drop`, `read_only`, сканирование **Trivy**, подпись **Cosign**.
 - Интеграция Docker с **CI/CD** и публикация образов в **GHCR**.
 
-> Навыки подтверждены в лабораторных проектах и задачах по спасению сервисов (Immich).
+> Навыки подтверждены в pet-проектах и задачах по спасению сервисов (Immich).
 
 ---
 
@@ -261,7 +276,7 @@ flowchart LR
 
 **Git · GitHub · Branching · Merge/Rebase · Workflow**
 
-*Система контроля версий, используемая во всех проектах.*
+*Система контроля версий, используемая во всех проектах*
 
 ### Навыки
 - Инициализация репозиториев, коммиты, работа с историей.
@@ -270,7 +285,7 @@ flowchart LR
 - Ведение `README.md`, `WORKLOG.md` и документации.
 - Отработка командной разработки через Pull Request.
 
-> Навыки Git подтверждены во всех лабораторных проектах и коммерческой автоматизации.
+> Навыки Git подтверждены во всех pet-проектах и коммерческой автоматизации.
 
 ---
 
@@ -288,7 +303,7 @@ flowchart LR
 ![Cosign](https://img.shields.io/badge/Cosign-5C2D91?style=flat-square&logo=sigstore&logoColor=white)
 ![GHCR](https://img.shields.io/badge/GHCR-181717?style=flat-square&logo=github&logoColor=white)
 
-*Лабораторный проект для практики контейнеризации и CI/CD.*
+*Pet-проект: контейнеризация Flask-приложения и настройка CI/CD*
 
 ### Реализовано
 - Разработан `Dockerfile` для Python-приложения (multi-stage build).
@@ -312,7 +327,7 @@ flowchart LR
 ![Pipeline](https://img.shields.io/badge/Pipeline-D24939?style=flat-square&logo=jenkins&logoColor=white)
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-2478D0?style=flat-square&logo=gitlab&logoColor=white)
 
-*Лабораторный стенд для изучения Jenkins CI/CD.*
+*Pet-проект: Jenkins Pipeline с Docker-in-Docker*
 
 ### Реализовано
 - Jenkins LTS в Docker с кастомным `Dockerfile`.
@@ -336,15 +351,14 @@ flowchart LR
 ![Node Exporter](https://img.shields.io/badge/Node%20Exporter-333333?style=flat-square&logo=prometheus&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-*Стек мониторинга для сбора, визуализации и алертинга метрик хоста ALT Linux.*
+*Pet-проект: стек наблюдаемости Prometheus + Grafana + Alertmanager*
 
 ### Реализовано
 - Развёрнут **Prometheus** для сбора метрик.
 - Настроен **Node Exporter** для метрик ОС (CPU, память, диск).
 - Подключён **Grafana** как источник визуализации.
-- Настроен **Alertmanager** с правилом `NodeDown`:
-  - Срабатывает, если таргет `up == 0` более 1 минуты.
-  - Полный цикл проверен: остановка Node Exporter → Firing → возврат → Inactive.
+- Настроен **Alertmanager** — принимает алерты от Prometheus и маршрутизирует их получателям (webhook, email, Telegram). Правило `NodeDown` срабатывает, если таргет недоступен более 1 минуты.
+- Полный цикл проверен: остановка Node Exporter → Firing → возврат → Inactive.
 - Создан дашборд **Node Metrics** с панелями:
   - CPU Usage (`rate()` + фильтр по `mode="idle"`)
   - Memory Usage
@@ -365,7 +379,7 @@ flowchart LR
 ![Calico](https://img.shields.io/badge/Calico-F76C00?style=flat-square&logo=projectcalico&logoColor=white)
 ![Flannel](https://img.shields.io/badge/Flannel-333333?style=flat-square&logo=kubernetes&logoColor=white)
 
-*Лабораторный стенд для практического изучения архитектуры и основных компонентов Kubernetes.*
+*Hands-on проект: развёртывание K8s-кластера с нуля*
 
 ### Реализовано
 - Развёрнут одновузловой Kubernetes-кластер на ALT Linux.
@@ -375,7 +389,7 @@ flowchart LR
 - Исследовалась работа CNI-плагинов **Calico** и **Flannel**.
 - Разбирались проблемы сетевого взаимодействия и запуска Pod.
 
-> ⚠️ **Статус:** лабораторный проект. Production-опыта управления Kubernetes-кластерами нет.
+> ℹ️ **Статус:** учебный стенд. Работаю над запуском CNI и деплоем приложений через Helm.
 
 🔗 **Repository:** [github.com/hagegata/k8s-basics](https://github.com/hagegata/k8s-basics)
 
@@ -390,7 +404,7 @@ flowchart LR
 ![SSSD](https://img.shields.io/badge/SSSD-CC0000?style=flat-square&logo=linux&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
-*Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux.*
+*Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux*
 
 ### Содержит:
 - **autoinstall** — автоматизация развертывания рабочих станций (установка ПО, настройка Zabbix, OVAL-сканирование).
@@ -399,25 +413,3 @@ flowchart LR
 - **ad-fix** — диагностика и исправление интеграции с Active Directory (SSSD/Winbind, id_max, кэш).
 
 🔗 **Repository:** [github.com/hagegata/linux-automation](https://github.com/hagegata/linux-automation)
-
----
-
-# 📈 Как я учусь
-
-Осваиваю DevOps-стек **параллельно и по спирали**: беру тему, углубляюсь, возвращаюсь к пройденному с новым контекстом.
-
-```text
-┌──────────────────────────────────────────────────────────┐
-│                  DevOps / Linux Engineering              │
-├──────────────────────────────────────────────────────────┤
-│   Linux Administration    Docker / Compose               │
-│   Bash / Python           Kubernetes / kubeadm           │
-│   Git / GitHub            CI/CD / GitHub Actions         │
-│   Networking              Jenkins / Pipeline             │
-│   Kerberos / SSSD         Prometheus / Grafana           │
-│   PostgreSQL / Redis      Alertmanager / Zabbix          │
-│   IaC / Cloud / DevSecOps                                │
-├──────────────────────────────────────────────────────────┤
-│       Темы изучаю в связке, возвращаюсь и углубляю       │
-└──────────────────────────────────────────────────────────┘
-```

@@ -177,236 +177,211 @@ flowchart LR
 # 📚 Учебный план и прогресс
 
 Системный план изучения DevOps-инструментов. Отмечаю пройденные модули.
-Модуль	Часы	Прогресс	Статус
-Linux	62	🟩🟩🟩🟩🟩 100%	Завершён
-Git	29.5	🟩🟩🟩🟩🟩 100%	Завершён
-Bash	23.5	🟩🟩⬜⬜⬜ 40%	В процессе
-Docker	37	🟩🟩🟩🟩🟩 100%	Завершён
-Kubernetes	72	🟩🟩⬜⬜⬜ 35%	В процессе
-CI/CD	39	🟩🟩🟩⬜⬜ 55%	В процессе
-Monitoring	35.5	🟩🟩🟩⬜⬜ 35%	В процессе
-IaC	37.5	⬜⬜⬜⬜⬜ 0%	Не начат
-Cloud	28.5	⬜⬜⬜⬜⬜ 0%	Не начат
-DevSecOps	24	⬜⬜⬜⬜⬜ 0%	Не начат
-Databases	21	⬜⬜⬜⬜⬜ 0%	Не начат
-Web & Networking	17	⬜⬜⬜⬜⬜ 0%	Не начат
 
-    Обновляю вручную по мере прохождения. Итоговая цель — полностью заполнить таблицу.
+| Модуль | Часы | Прогресс | Статус |
+|--------|------|----------|--------|
+| Linux | 62 | 🟩🟩🟩🟩🟩 100% | Завершён |
+| Git | 29.5 | 🟩🟩🟩🟩🟩 100% | Завершён |
+| Bash | 23.5 | 🟩🟩⬜⬜⬜ 40% | В процессе |
+| Docker | 37 | 🟩🟩🟩🟩🟩 100% | Завершён |
+| Kubernetes | 72 | 🟩🟩⬜⬜⬜ 35% | В процессе |
+| CI/CD | 39 | 🟩🟩🟩⬜⬜ 55% | В процессе |
+| Monitoring | 35.5 | 🟩🟩🟩⬜⬜ 35% | В процессе |
+| IaC | 37.5 | ⬜⬜⬜⬜⬜ 0% | Не начат |
+| Cloud | 28.5 | ⬜⬜⬜⬜⬜ 0% | Не начат |
+| DevSecOps | 24 | ⬜⬜⬜⬜⬜ 0% | Не начат |
+| Databases | 21 | ⬜⬜⬜⬜⬜ 0% | Не начат |
+| Web & Networking | 17 | ⬜⬜⬜⬜⬜ 0% | Не начат |
 
-🚀 Избранные проекты и кейсы
-🏢 Enterprise Automation & Security
+> Обновляю вручную по мере прохождения. Итоговая цель — полностью заполнить таблицу.
 
-Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК
+---
 
-Коммерческий проект — Законодательное Собрание Кировской области.
-Проблема
+# 🚀 Избранные проекты и кейсы
 
+## 🏢 Enterprise Automation & Security
+
+**Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК**
+
+*Коммерческий проект — Законодательное Собрание Кировской области.*
+
+### Проблема
 Ручная подготовка рабочих мест занимала 2–3 часа. Требовалась автоматизация установки ПО, мониторинга, аудита безопасности и доступа к SMB-ресурсам.
-Решение
 
-    Разработал Bash-скрипт автоматизированного развертывания ALT Linux.
+### Решение
+- Разработал Bash-скрипт автоматизированного развертывания ALT Linux.
+- Автоматизировал установку ПО, настройку Zabbix Agent, GLPI, UrBackup и OVAL-сканирования.
+- Реализовал `UserParameter` в Zabbix для передачи метрик OVAL.
+- Настроил интеграцию Linux с Active Directory через SSSD/Kerberos.
+- Автоматизировал подключение SMB-ресурсов.
 
-    Автоматизировал установку ПО, настройку Zabbix Agent, GLPI, UrBackup и OVAL-сканирования.
+### Результат
+**Время подготовки рабочего места сокращено с 2–3 часов до 20–30 минут.**
 
-    Реализовал UserParameter в Zabbix для передачи метрик OVAL.
+---
 
-    Настроил интеграцию Linux с Active Directory через SSSD/Kerberos.
+## 🛠️ Immich Infrastructure Rescue
 
-    Автоматизировал подключение SMB-ресурсов.
+**Linux · Docker/Snap · PostgreSQL · Bash**
 
-Результат
-
-Время подготовки рабочего места сокращено с 2–3 часов до 20–30 минут.
-🛠️ Immich Infrastructure Rescue
-
-Linux · Docker/Snap · PostgreSQL · Bash
-Проблема
-
+### Проблема
 Сервис падал из-за OOM Killer, переполнения корневого раздела и проблем со схемой PostgreSQL после обновлений.
-Решение
 
-    Перенёс данные PostgreSQL и медиабиблиотеку на отдельный раздел.
+### Решение
+- Перенёс данные PostgreSQL и медиабиблиотеку на отдельный раздел.
+- Перенёс **390 ГБ** фотобиблиотеки без изменения путей в БД.
+- Устранил PostgreSQL `schema drift` и восстановил первичные ключи.
+- Добавил **4 ГБ swap** и снизил параллелизм ресурсоёмких задач.
+- Настроил автоматическое резервное копирование PostgreSQL и очистку логов.
 
-    Перенёс 390 ГБ фотобиблиотеки без изменения путей в БД.
+### Результат
+Заполнение корневого раздела снижено **с 88% до 21%**, сервис стабилизирован.
 
-    Устранил PostgreSQL schema drift и восстановил первичные ключи.
+---
 
-    Добавил 4 ГБ swap и снизил параллелизм ресурсоёмких задач.
+## 🐳 Docker & Docker Compose
 
-    Настроил автоматическое резервное копирование PostgreSQL и очистку логов.
+**Docker · Dockerfile · Multi-stage Build · Compose · Volumes · Networks · Healthcheck**
 
-Результат
+*Практическое применение контейнеризации в лабораторных и производственных сценариях.*
 
-Заполнение корневого раздела снижено с 88% до 21%, сервис стабилизирован.
-🐳 Docker & Docker Compose
+### Навыки
+- Написание `Dockerfile` (включая **multi-stage build** для уменьшения размера образа).
+- Работа с **Docker Compose**: описание многоконтейнерных приложений, настройка сетей, томов, переменных окружения.
+- Настройка **healthcheck** для контроля доступности сервисов.
+- Ограничение ресурсов: `--memory`, `--cpus`, `--pids-limit`.
+- Управление томами: создание, бэкап, восстановление.
+- Работа с сетями: `bridge`, `host`, `none`, пользовательские сети, service discovery.
+- Безопасность контейнеров: запуск от не-root, `cap_drop`, `read_only`, сканирование **Trivy**, подпись **Cosign**.
+- Интеграция Docker с **CI/CD** и публикация образов в **GHCR**.
 
-Docker · Dockerfile · Multi-stage Build · Compose · Volumes · Networks · Healthcheck
+> Навыки подтверждены в лабораторных проектах и задачах по спасению сервисов (Immich).
 
-Практическое применение контейнеризации в лабораторных и производственных сценариях.
-Навыки
+---
 
-    Написание Dockerfile (включая multi-stage build для уменьшения размера образа).
+## 🔧 Git: управление версиями и практическое применение
 
-    Работа с Docker Compose: описание многоконтейнерных приложений, настройка сетей, томов, переменных окружения.
+**Git · GitHub · Branching · Merge/Rebase · Workflow**
 
-    Настройка healthcheck для контроля доступности сервисов.
+*Система контроля версий, используемая во всех проектах.*
 
-    Ограничение ресурсов: --memory, --cpus, --pids-limit.
+### Навыки
+- Инициализация репозиториев, коммиты, работа с историей.
+- Ветвление, разрешение конфликтов, `rebase`, `cherry-pick`.
+- Настройка SSH-аутентификации для GitHub.
+- Ведение `README.md`, `WORKLOG.md` и документации.
+- Отработка командной разработки через Pull Request.
 
-    Управление томами: создание, бэкап, восстановление.
+> Навыки Git подтверждены во всех лабораторных проектах и коммерческой автоматизации.
 
-    Работа с сетями: bridge, host, none, пользовательские сети, service discovery.
+---
 
-    Безопасность контейнеров: запуск от не-root, cap_drop, read_only, сканирование Trivy, подпись Cosign.
+## 🐍 [myflask](https://github.com/hagegata/myflask)
 
-    Интеграция Docker с CI/CD и публикация образов в GHCR.
+**Python · Flask · Docker · Docker Compose · GitHub Actions · CI/CD**
 
-    Навыки подтверждены в лабораторных проектах и задачах по спасению сервисов (Immich).
+*Лабораторный проект для практики контейнеризации и CI/CD.*
 
-🔧 Git: управление версиями и практическое применение
+### Реализовано
+- Разработан `Dockerfile` для Python-приложения (multi-stage build).
+- Настроен `docker-compose.yml` для нескольких сервисов.
+- Подключён Redis, настроены healthcheck.
+- CI/CD pipeline в GitHub Actions:
+  - Matrix-тестирование (Python 3.10, 3.11, 3.12).
+  - Кэширование pip-зависимостей.
+  - Сканирование образа через **Trivy**.
+  - Подпись образа через **Cosign**.
+  - Публикация в **GHCR** (только на main).
 
-Git · GitHub · Branching · Merge/Rebase · Workflow
+🔗 **Repository:** [github.com/hagegata/myflask](https://github.com/hagegata/myflask)
 
-Система контроля версий, используемая во всех проектах.
-Навыки
+---
 
-    Инициализация репозиториев, коммиты, работа с историей.
+## ⚙️ [jenkins-lab](https://github.com/hagegata/jenkins-lab)
 
-    Ветвление, разрешение конфликтов, rebase, cherry-pick.
+**Jenkins · Docker · Pipeline · CI/CD**
 
-    Настройка SSH-аутентификации для GitHub.
+*Лабораторный стенд для изучения Jenkins CI/CD.*
 
-    Ведение README.md, WORKLOG.md и документации.
+### Реализовано
+- Jenkins LTS в Docker с кастомным `Dockerfile`.
+- Установка **Docker CLI** внутрь контейнера Jenkins.
+- Проброс `docker.sock` с правильным GID (425) для доступа без `chmod 666`.
+- Pipeline из 4 стадий:
+  - **Checkout** — скачивание кода из GitHub.
+  - **Build** — сборка Docker-образа.
+  - **Test** — проверка импорта Flask.
+  - **Cleanup** — удаление образа.
 
-    Отработка командной разработки через Pull Request.
+🔗 **Repository:** [github.com/hagegata/jenkins-lab](https://github.com/hagegata/jenkins-lab)
 
-    Навыки Git подтверждены во всех лабораторных проектах и коммерческой автоматизации.
+---
 
-🐍 myflask
+## 📊 [monitoring](https://github.com/hagegata/monitoring)
 
-Python · Flask · Docker · Docker Compose · GitHub Actions · CI/CD
+**Prometheus · Alertmanager · Grafana · Node Exporter · Docker Compose**
 
-Лабораторный проект для практики контейнеризации и CI/CD.
-Реализовано
+*Стек мониторинга для сбора, визуализации и алертинга метрик хоста ALT Linux.*
 
-    Разработан Dockerfile для Python-приложения (multi-stage build).
+### Реализовано
+- Развёрнут **Prometheus** для сбора метрик.
+- Настроен **Node Exporter** для метрик ОС (CPU, память, диск).
+- Подключён **Grafana** как источник визуализации.
+- Настроен **Alertmanager** с правилом `NodeDown`:
+  - Срабатывает, если таргет `up == 0` более 1 минуты.
+  - Полный цикл проверен: остановка Node Exporter → Firing → возврат → Inactive.
+- Создан дашборд **Node Metrics** с панелями:
+  - CPU Usage (`rate()` + фильтр по `mode="idle"`)
+  - Memory Usage
+  - Disk Usage (root)
+  - Load Average
+- Все сервисы работают в `network_mode: host` (обход проблемы с портами на ALT Linux).
 
-    Настроен docker-compose.yml для нескольких сервисов.
+🔗 **Repository:** [github.com/hagegata/monitoring](https://github.com/hagegata/monitoring)
 
-    Подключён Redis, настроены healthcheck.
+---
 
-    CI/CD pipeline в GitHub Actions:
+## ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics)
 
-        Matrix-тестирование (Python 3.10, 3.11, 3.12).
+**Kubernetes · kubeadm · containerd · kubectl**
 
-        Кэширование pip-зависимостей.
+*Лабораторный стенд для практического изучения архитектуры и основных компонентов Kubernetes.*
 
-        Сканирование образа через Trivy.
+### Реализовано
+- Развёрнут одновузловой Kubernetes-кластер на ALT Linux.
+- Настроены `kubeadm` и `containerd`.
+- Созданы манифесты: `Pod`, `Deployment`, `Service`, `ConfigMap`, `Secret`, `StatefulSet`, `PV/PVC`.
+- Выполнялась диагностика через `kubectl`.
+- Исследовалась работа CNI-плагинов **Calico** и **Flannel**.
+- Разбирались проблемы сетевого взаимодействия и запуска Pod.
 
-        Подпись образа через Cosign.
+> ⚠️ **Статус:** лабораторный проект. Production-опыта управления Kubernetes-кластерами нет.
 
-        Публикация в GHCR (только на main).
+🔗 **Repository:** [github.com/hagegata/k8s-basics](https://github.com/hagegata/k8s-basics)
 
-🔗 Repository: github.com/hagegata/myflask
-⚙️ jenkins-lab
+---
 
-Jenkins · Docker · Pipeline · CI/CD
+## 🛠️ [linux-automation](https://github.com/hagegata/linux-automation)
 
-Лабораторный стенд для изучения Jenkins CI/CD.
-Реализовано
+**Bash · CIFS · Kerberos · Kubernetes · AD/SSSD · ALT Linux · Автоматизация**
 
-    Jenkins LTS в Docker с кастомным Dockerfile.
+*Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux.*
 
-    Установка Docker CLI внутрь контейнера Jenkins.
+### Содержит:
+- **autoinstall** — автоматизация развертывания рабочих станций (установка ПО, настройка Zabbix, OVAL-сканирование).
+- **cifs-mount** — автоматическое монтирование SMB/CIFS-шар с Kerberos-аутентификацией, создание русскоязычных симлинков и закладок в Caja.
+- **k8s-install** — установка Kubernetes и траблшутинг (Flannel, TLS, порты и др.).
+- **ad-fix** — диагностика и исправление интеграции с Active Directory (SSSD/Winbind, id_max, кэш).
 
-    Проброс docker.sock с правильным GID (425) для доступа без chmod 666.
+🔗 **Repository:** [github.com/hagegata/linux-automation](https://github.com/hagegata/linux-automation)
 
-    Pipeline из 4 стадий:
+---
 
-        Checkout — скачивание кода из GitHub.
+# 📈 Как я учусь
 
-        Build — сборка Docker-образа.
+Осваиваю DevOps-стек **параллельно и по спирали**: беру тему, углубляюсь, возвращаюсь к пройденному с новым контекстом.
 
-        Test — проверка импорта Flask.
-
-        Cleanup — удаление образа.
-
-🔗 Repository: github.com/hagegata/jenkins-lab
-📊 monitoring
-
-Prometheus · Alertmanager · Grafana · Node Exporter · Docker Compose
-
-Стек мониторинга для сбора, визуализации и алертинга метрик хоста ALT Linux.
-Реализовано
-
-    Развёрнут Prometheus для сбора метрик.
-
-    Настроен Node Exporter для метрик ОС (CPU, память, диск).
-
-    Подключён Grafana как источник визуализации.
-
-    Настроен Alertmanager с правилом NodeDown:
-
-        Срабатывает, если таргет up == 0 более 1 минуты.
-
-        Полный цикл проверен: остановка Node Exporter → Firing → возврат → Inactive.
-
-    Создан дашборд Node Metrics с панелями:
-
-        CPU Usage (rate() + фильтр по mode="idle")
-
-        Memory Usage
-
-        Disk Usage (root)
-
-        Load Average
-
-    Все сервисы работают в network_mode: host (обход проблемы с портами на ALT Linux).
-
-🔗 Repository: github.com/hagegata/monitoring
-☸️ k8s-basics
-
-Kubernetes · kubeadm · containerd · kubectl
-
-Лабораторный стенд для практического изучения архитектуры и основных компонентов Kubernetes.
-Реализовано
-
-    Развёрнут одновузловой Kubernetes-кластер на ALT Linux.
-
-    Настроены kubeadm и containerd.
-
-    Созданы манифесты: Pod, Deployment, Service, ConfigMap, Secret, StatefulSet, PV/PVC.
-
-    Выполнялась диагностика через kubectl.
-
-    Исследовалась работа CNI-плагинов Calico и Flannel.
-
-    Разбирались проблемы сетевого взаимодействия и запуска Pod.
-
-    ⚠️ Статус: лабораторный проект. Production-опыта управления Kubernetes-кластерами нет.
-
-🔗 Repository: github.com/hagegata/k8s-basics
-🛠️ linux-automation
-
-Bash · CIFS · Kerberos · Kubernetes · AD/SSSD · ALT Linux · Автоматизация
-
-Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux.
-Содержит:
-
-    autoinstall — автоматизация развертывания рабочих станций (установка ПО, настройка Zabbix, OVAL-сканирование).
-
-    cifs-mount — автоматическое монтирование SMB/CIFS-шар с Kerberos-аутентификацией, создание русскоязычных симлинков и закладок в Caja.
-
-    k8s-install — установка Kubernetes и траблшутинг (Flannel, TLS, порты и др.).
-
-    ad-fix — диагностика и исправление интеграции с Active Directory (SSSD/Winbind, id_max, кэш).
-
-🔗 Repository: github.com/hagegata/linux-automation
-📈 Как я учусь
-
-Осваиваю DevOps-стек параллельно и по спирали: беру тему, углубляюсь, возвращаюсь к пройденному с новым контекстом.
-text
-
+```text
 ┌──────────────────────────────────────────────────────────┐
 │                  DevOps / Linux Engineering              │
 ├──────────────────────────────────────────────────────────┤
@@ -420,3 +395,4 @@ text
 ├──────────────────────────────────────────────────────────┤
 │       Темы изучаю в связке, возвращаюсь и углубляю       │
 └──────────────────────────────────────────────────────────┘
+```

@@ -5,7 +5,7 @@
 Занимаюсь администрированием Linux/Windows-инфраструктуры, автоматизацией на Bash и сопровождением корпоративных сервисов.
 Развиваюсь в направлении Linux Engineering и DevOps: контейнеризация, CI/CD, GitHub Actions, Jenkins, Kubernetes и мониторинг.
 
-📄 **Резюме:** [hh.ru/resume/ваш_id](https://hh.ru/resume/3035d41cff10607a400039ed1f32467a416956)
+📄 **Резюме:** [hh](https://hh.ru/resume/3035d41cff10607a400039ed1f32467a416956)
 
 ---
 

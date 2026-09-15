@@ -291,7 +291,7 @@ flowchart LR
 
 ## 📊 [monitoring](https://github.com/hagegata/monitoring)
 
-**Prometheus · Grafana · Node Exporter · Docker Compose**
+**Prometheus · Grafana · Node Exporter ·**
 
 *Стек мониторинга для сбора и визуализации метрик хоста ALT Linux.*
 

@@ -3,7 +3,7 @@
 ### 🧑‍💻 Системный администратор → Linux Engineer / Junior DevOps
 
 Занимаюсь администрированием Linux/Windows-инфраструктуры, автоматизацией на Bash и сопровождением корпоративных сервисов.
-Развиваюсь в направлении Linux Engineering и DevOps: контейнеризация, CI/CD, GitHub Actions, Kubernetes и инфраструктурная автоматизация.
+Развиваюсь в направлении Linux Engineering и DevOps: контейнеризация, CI/CD, GitHub Actions, Jenkins, Kubernetes, мониторинг и инфраструктурная автоматизация.
 
 ---
 
@@ -55,12 +55,13 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![containerd](https://img.shields.io/badge/containerd-575757?style=for-the-badge&logo=containerd&logoColor=white)
 ![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=for-the-badge&logo=aqua&logoColor=white)
 ![Cosign](https://img.shields.io/badge/Cosign-5C2D91?style=for-the-badge&logo=sigstore&logoColor=white)
 
-`Dockerfile` · `Docker Compose` · `CI/CD` · `GitHub Actions` · `GHCR` · `kubeadm` · `kubectl` · `CNI`
+`Dockerfile` · `Docker Compose` · `CI/CD` · `GitHub Actions` · `Jenkins` · `Pipeline` · `GHCR` · `kubeadm` · `kubectl` · `CNI`
 
 > ℹ️ Kubernetes и CI/CD — лабораторная практика.
 
@@ -70,6 +71,7 @@
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Alertmanager](https://img.shields.io/badge/Alertmanager-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Node Exporter](https://img.shields.io/badge/Node%20Exporter-333333?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Zabbix](https://img.shields.io/badge/Zabbix-D40000?style=for-the-badge&logo=zabbix&logoColor=white)
 ![OVAL](https://img.shields.io/badge/OVAL-333333?style=for-the-badge&logo=linux&logoColor=white)
@@ -77,7 +79,7 @@
 ![Kaspersky](https://img.shields.io/badge/Kaspersky-006DCC?style=for-the-badge&logo=kaspersky&logoColor=white)
 ![GLPI](https://img.shields.io/badge/GLPI-1F6FEB?style=for-the-badge&logo=glpi&logoColor=white)
 
-`Prometheus` · `PromQL` · `Grafana` · `Node Exporter` · `Zabbix Agent` · `UserParameter` · `OVAL` · `ScanOval` · `ФСТЭК`
+`Prometheus` · `PromQL` · `Grafana` · `Alertmanager` · `Node Exporter` · `Zabbix Agent` · `UserParameter` · `OVAL` · `ScanOval` · `ФСТЭК`
 
 ---
 
@@ -140,7 +142,12 @@ flowchart LR
     subgraph Containers["📦 Контейнеризация"]
         direction TB
         Docker[Docker / Compose]
-        CICD[CI/CD / GitHub Actions]
+    end
+
+    subgraph CICD["🔁 CI/CD"]
+        direction TB
+        GHA[GitHub Actions]
+        Jenkins[Jenkins]
     end
 
     subgraph Orchestration["☸️ Оркестрация"]
@@ -151,223 +158,263 @@ flowchart LR
     subgraph Observability["📊 Наблюдаемость"]
         direction TB
         Prom[Prometheus]
+        Alert[Alertmanager]
         Graf[Grafana]
     end
 
     Linux --> Automation
     Automation --> Containers
-    Containers --> Orchestration
+    Containers --> CICD
+    CICD --> Orchestration
     Orchestration --> Observability
 
     Core -.-> Docker
     Net -.-> K8s
     Fs -.-> Prom
-```
 
----
-
-# 📚 Учебный план и прогресс
+    📚 Учебный план и прогресс
 
 Системный план изучения DevOps-инструментов. Отмечаю пройденные модули.
+Модуль	Часы	Прогресс	Статус
+Linux	62	🟩🟩🟩🟩🟩 100%	Завершён
+Git	29.5	🟩🟩🟩🟩🟩 100%	Завершён
+Bash	23.5	🟩🟩⬜⬜⬜ 40%	В процессе
+Docker	37	🟩🟩🟩🟩🟩 100%	Завершён
+Kubernetes	72	🟩🟩⬜⬜⬜ 35%	В процессе
+CI/CD	39	🟩🟩🟩⬜⬜ 55%	В процессе
+Monitoring	35.5	🟩🟩🟩⬜⬜ 35%	В процессе
+IaC	37.5	⬜⬜⬜⬜⬜ 0%	Не начат
+Cloud	28.5	⬜⬜⬜⬜⬜ 0%	Не начат
+DevSecOps	24	⬜⬜⬜⬜⬜ 0%	Не начат
+Databases	21	⬜⬜⬜⬜⬜ 0%	Не начат
+Web & Networking	17	⬜⬜⬜⬜⬜ 0%	Не начат
 
-| Модуль | Часы | Прогресс | Статус |
-|--------|------|----------|--------|
-| Linux | 62 | 🟩🟩🟩🟩🟩 100% | Завершён |
-| Git | 29.5 | 🟩🟩🟩🟩🟩 100% | Завершён |
-| Bash | 23.5 | 🟩🟩⬜⬜⬜ 40% | В процессе |
-| Docker | 37 | 🟩🟩🟩🟩🟩 100% | Завершён |
-| Kubernetes | 72 | 🟩🟩⬜⬜⬜ 35% | В процессе |
-| CI/CD | 39 | 🟩🟩🟩⬜⬜ 50% | В процессе |
-| Monitoring | 35.5 | 🟩🟩⬜⬜⬜ 25% | В процессе |
-| IaC | 37.5 | ⬜⬜⬜⬜⬜ 0% | Не начат |
-| Cloud | 28.5 | ⬜⬜⬜⬜⬜ 0% | Не начат |
-| DevSecOps | 24 | ⬜⬜⬜⬜⬜ 0% | Не начат |
-| Databases | 21 | ⬜⬜⬜⬜⬜ 0% | Не начат |
-| Web & Networking | 17 | ⬜⬜⬜⬜⬜ 0% | Не начат |
+    Обновляю вручную по мере прохождения. Итоговая цель — полностью заполнить таблицу.
 
-> Обновляю вручную по мере прохождения. Итоговая цель — полностью заполнить таблицу.
+🚀 Избранные проекты и кейсы
+🏢 Enterprise Automation & Security
 
----
+Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК
 
-# 🚀 Избранные проекты и кейсы
+Коммерческий проект — Законодательное Собрание Кировской области.
+Проблема
 
-## 🏢 Enterprise Automation & Security
-
-**Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК**
-
-*Коммерческий проект — Законодательное Собрание Кировской области.*
-
-### Проблема
 Ручная подготовка рабочих мест занимала 2–3 часа. Требовалась автоматизация установки ПО, мониторинга, аудита безопасности и доступа к SMB-ресурсам.
+Решение
 
-### Решение
-- Разработал Bash-скрипт автоматизированного развертывания ALT Linux.
-- Автоматизировал установку ПО, настройку Zabbix Agent, GLPI, UrBackup и OVAL-сканирования.
-- Реализовал `UserParameter` в Zabbix для передачи метрик OVAL.
-- Настроил интеграцию Linux с Active Directory через SSSD/Kerberos.
-- Автоматизировал подключение SMB-ресурсов.
+    Разработал Bash-скрипт автоматизированного развертывания ALT Linux.
 
-### Результат
-**Время подготовки рабочего места сокращено с 2–3 часов до 20–30 минут.**
+    Автоматизировал установку ПО, настройку Zabbix Agent, GLPI, UrBackup и OVAL-сканирования.
 
----
+    Реализовал UserParameter в Zabbix для передачи метрик OVAL.
 
-## 🛠️ Immich Infrastructure Rescue
+    Настроил интеграцию Linux с Active Directory через SSSD/Kerberos.
 
-**Linux · Docker/Snap · PostgreSQL · Bash**
+    Автоматизировал подключение SMB-ресурсов.
 
-### Проблема
+Результат
+
+Время подготовки рабочего места сокращено с 2–3 часов до 20–30 минут.
+🛠️ Immich Infrastructure Rescue
+
+Linux · Docker/Snap · PostgreSQL · Bash
+Проблема
+
 Сервис падал из-за OOM Killer, переполнения корневого раздела и проблем со схемой PostgreSQL после обновлений.
+Решение
 
-### Решение
-- Перенёс данные PostgreSQL и медиабиблиотеку на отдельный раздел.
-- Перенёс **390 ГБ** фотобиблиотеки без изменения путей в БД.
-- Устранил PostgreSQL `schema drift` и восстановил первичные ключи.
-- Добавил **4 ГБ swap** и снизил параллелизм ресурсоёмких задач.
-- Настроил автоматическое резервное копирование PostgreSQL и очистку логов.
+    Перенёс данные PostgreSQL и медиабиблиотеку на отдельный раздел.
 
-### Результат
-Заполнение корневого раздела снижено **с 88% до 21%**, сервис стабилизирован.
+    Перенёс 390 ГБ фотобиблиотеки без изменения путей в БД.
 
----
+    Устранил PostgreSQL schema drift и восстановил первичные ключи.
 
-## 🐳 Docker & Docker Compose
+    Добавил 4 ГБ swap и снизил параллелизм ресурсоёмких задач.
 
-**Docker · Dockerfile · Multi-stage Build · Compose · Volumes · Networks · Healthcheck**
+    Настроил автоматическое резервное копирование PostgreSQL и очистку логов.
 
-*Практическое применение контейнеризации в лабораторных и производственных сценариях.*
+Результат
 
-### Навыки
-- Написание `Dockerfile` (включая **multi-stage build** для уменьшения размера образа).
-- Работа с **Docker Compose**: описание многоконтейнерных приложений, настройка сетей, томов, переменных окружения.
-- Настройка **healthcheck** для контроля доступности сервисов.
-- Ограничение ресурсов: `--memory`, `--cpus`, `--pids-limit`.
-- Управление томами: создание, бэкап, восстановление.
-- Работа с сетями: `bridge`, `host`, `none`, пользовательские сети, service discovery.
-- Безопасность контейнеров: запуск от не-root, `cap_drop`, `read_only`, сканирование **Trivy**, подпись **Cosign**.
-- Интеграция Docker с **CI/CD** и публикация образов в **GHCR**.
+Заполнение корневого раздела снижено с 88% до 21%, сервис стабилизирован.
+🐳 Docker & Docker Compose
 
-> Навыки подтверждены в лабораторных проектах и задачах по спасению сервисов (Immich).
+Docker · Dockerfile · Multi-stage Build · Compose · Volumes · Networks · Healthcheck
 
----
+Практическое применение контейнеризации в лабораторных и производственных сценариях.
+Навыки
 
-## 🔧 Git: управление версиями и практическое применение
+    Написание Dockerfile (включая multi-stage build для уменьшения размера образа).
 
-**Git · GitHub · Branching · Merge/Rebase · Workflow**
+    Работа с Docker Compose: описание многоконтейнерных приложений, настройка сетей, томов, переменных окружения.
 
-*Система контроля версий, используемая во всех проектах.*
+    Настройка healthcheck для контроля доступности сервисов.
 
-### Навыки
-- Инициализация репозиториев, коммиты, работа с историей.
-- Ветвление, разрешение конфликтов, `rebase`, `cherry-pick`.
-- Настройка SSH-аутентификации для GitHub.
-- Ведение `README.md`, `WORKLOG.md` и документации.
-- Отработка командной разработки через Pull Request.
+    Ограничение ресурсов: --memory, --cpus, --pids-limit.
 
-> Навыки Git подтверждены во всех лабораторных проектах и коммерческой автоматизации.
+    Управление томами: создание, бэкап, восстановление.
 
----
+    Работа с сетями: bridge, host, none, пользовательские сети, service discovery.
 
-## 🐍 [myflask](https://github.com/hagegata/myflask)
+    Безопасность контейнеров: запуск от не-root, cap_drop, read_only, сканирование Trivy, подпись Cosign.
 
-**Python · Flask · Docker · Docker Compose · GitHub Actions · CI/CD**
+    Интеграция Docker с CI/CD и публикация образов в GHCR.
 
-*Лабораторный проект для практики контейнеризации и CI/CD.*
+    Навыки подтверждены в лабораторных проектах и задачах по спасению сервисов (Immich).
 
-### Реализовано
-- Разработан `Dockerfile` для Python-приложения.
-- Настроен `docker-compose.yml` для нескольких сервисов.
-- Подключён Redis.
-- Настроены healthcheck и взаимодействие контейнеров.
-- Создан CI/CD pipeline в GitHub Actions.
-- Реализованы сборка, тестирование и публикация Docker-образа.
-- Настроено сканирование образа через **Trivy**.
-- Реализована подпись образа через **Cosign**.
-- Образ публикуется в **GHCR**.
+🔧 Git: управление версиями и практическое применение
 
-🔗 **Repository:** [github.com/hagegata/myflask](https://github.com/hagegata/myflask)
+Git · GitHub · Branching · Merge/Rebase · Workflow
 
----
+Система контроля версий, используемая во всех проектах.
+Навыки
 
-## 📊 [monitoring](https://github.com/hagegata/monitoring)
+    Инициализация репозиториев, коммиты, работа с историей.
 
-**Prometheus · Grafana · Node Exporter ·**
+    Ветвление, разрешение конфликтов, rebase, cherry-pick.
 
-*Стек мониторинга для сбора и визуализации метрик хоста ALT Linux.*
+    Настройка SSH-аутентификации для GitHub.
 
-### Реализовано
-- Развёрнут **Prometheus** для сбора метрик.
-- Настроен **Node Exporter** для метрик ОС (CPU, память, диск).
-- Подключён **Grafana** как источник визуализации.
-- Создан дашборд **Node Metrics** с панелями:
-  - CPU Usage (PromQL: `rate` + фильтр по `mode="idle"`)
-  - Memory Usage
-  - Disk Usage (root)
-  - Load Average
-- Все сервисы работают в `network_mode: host` (обход проблемы с портами на ALT Linux).
+    Ведение README.md, WORKLOG.md и документации.
 
-🔗 **Repository:** [github.com/hagegata/monitoring](https://github.com/hagegata/monitoring)
+    Отработка командной разработки через Pull Request.
 
----
+    Навыки Git подтверждены во всех лабораторных проектах и коммерческой автоматизации.
 
-## ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics)
+🐍 myflask
 
-**Kubernetes · kubeadm · containerd · kubectl**
+Python · Flask · Docker · Docker Compose · GitHub Actions · CI/CD
 
-*Лабораторный стенд для практического изучения архитектуры и основных компонентов Kubernetes.*
+Лабораторный проект для практики контейнеризации и CI/CD.
+Реализовано
 
-### Реализовано
-- Развёрнут одновузловой Kubernetes-кластер на ALT Linux.
-- Настроены `kubeadm` и `containerd`.
-- Созданы манифесты:
-  - `Pod`
-  - `Deployment`
-  - `Service`
-  - `ConfigMap`
-  - `Secret`
-  - `StatefulSet`
-  - `PV/PVC`
-- Выполнялась диагностика через `kubectl`.
-- Исследовалась работа CNI-плагинов **Calico** и **Flannel**.
-- Разбирались проблемы сетевого взаимодействия и запуска Pod.
+    Разработан Dockerfile для Python-приложения (multi-stage build).
 
-> ⚠️ **Статус:** лабораторный проект. Production-опыта управления Kubernetes-кластерами нет.
+    Настроен docker-compose.yml для нескольких сервисов.
 
-🔗 **Repository:** [github.com/hagegata/k8s-basics](https://github.com/hagegata/k8s-basics)
+    Подключён Redis, настроены healthcheck.
 
----
+    CI/CD pipeline в GitHub Actions:
 
-## 🛠️ [linux-automation](https://github.com/hagegata/linux-automation)
+        Matrix-тестирование (Python 3.10, 3.11, 3.12).
 
-**Bash · CIFS · Kerberos · Kubernetes · AD/SSSD · ALT Linux · Автоматизация**
+        Кэширование pip-зависимостей.
 
-*Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux.*
+        Сканирование образа через Trivy.
 
-### Содержит:
-- **autoinstall** — автоматизация развертывания рабочих станций (установка ПО, настройка Zabbix, OVAL-сканирование).
-- **cifs-mount** — автоматическое монтирование SMB/CIFS-шар с Kerberos-аутентификацией, создание русскоязычных симлинков и закладок в Caja.
-- **k8s-install** — установка Kubernetes и траблшутинг (Flannel, TLS, порты и др.).
-- **ad-fix** — диагностика и исправление интеграции с Active Directory (SSSD/Winbind, id_max, кэш).
+        Подпись образа через Cosign.
 
-🔗 **Repository:** [github.com/hagegata/linux-automation](https://github.com/hagegata/linux-automation)
+        Публикация в GHCR (только на main).
 
----
+🔗 Repository: github.com/hagegata/myflask
+⚙️ jenkins-lab
 
-# 📈 Как я учусь
+Jenkins · Docker · Pipeline · CI/CD
 
-Осваиваю DevOps-стек **параллельно и по спирали**: беру тему, углубляюсь, возвращаюсь к пройденному с новым контекстом.
+Лабораторный стенд для изучения Jenkins CI/CD.
+Реализовано
 
-```text
+    Jenkins LTS в Docker с кастомным Dockerfile.
+
+    Установка Docker CLI внутрь контейнера Jenkins.
+
+    Проброс docker.sock с правильным GID (425) для доступа без chmod 666.
+
+    Pipeline из 4 стадий:
+
+        Checkout — скачивание кода из GitHub.
+
+        Build — сборка Docker-образа.
+
+        Test — проверка импорта Flask.
+
+        Cleanup — удаление образа.
+
+🔗 Repository: github.com/hagegata/jenkins-lab
+📊 monitoring
+
+Prometheus · Alertmanager · Grafana · Node Exporter · Docker Compose
+
+Стек мониторинга для сбора, визуализации и алертинга метрик хоста ALT Linux.
+Реализовано
+
+    Развёрнут Prometheus для сбора метрик.
+
+    Настроен Node Exporter для метрик ОС (CPU, память, диск).
+
+    Подключён Grafana как источник визуализации.
+
+    Настроен Alertmanager с правилом NodeDown:
+
+        Срабатывает, если таргет up == 0 более 1 минуты.
+
+        Полный цикл проверен: остановка Node Exporter → Firing → возврат → Inactive.
+
+    Создан дашборд Node Metrics с панелями:
+
+        CPU Usage (rate() + фильтр по mode="idle")
+
+        Memory Usage
+
+        Disk Usage (root)
+
+        Load Average
+
+    Все сервисы работают в network_mode: host (обход проблемы с портами на ALT Linux).
+
+🔗 Repository: github.com/hagegata/monitoring
+☸️ k8s-basics
+
+Kubernetes · kubeadm · containerd · kubectl
+
+Лабораторный стенд для практического изучения архитектуры и основных компонентов Kubernetes.
+Реализовано
+
+    Развёрнут одновузловой Kubernetes-кластер на ALT Linux.
+
+    Настроены kubeadm и containerd.
+
+    Созданы манифесты: Pod, Deployment, Service, ConfigMap, Secret, StatefulSet, PV/PVC.
+
+    Выполнялась диагностика через kubectl.
+
+    Исследовалась работа CNI-плагинов Calico и Flannel.
+
+    Разбирались проблемы сетевого взаимодействия и запуска Pod.
+
+    ⚠️ Статус: лабораторный проект. Production-опыта управления Kubernetes-кластерами нет.
+
+🔗 Repository: github.com/hagegata/k8s-basics
+🛠️ linux-automation
+
+Bash · CIFS · Kerberos · Kubernetes · AD/SSSD · ALT Linux · Автоматизация
+
+Коллекция скриптов для автоматизации задач системного администрирования на рабочих станциях ALT Linux.
+Содержит:
+
+    autoinstall — автоматизация развертывания рабочих станций (установка ПО, настройка Zabbix, OVAL-сканирование).
+
+    cifs-mount — автоматическое монтирование SMB/CIFS-шар с Kerberos-аутентификацией, создание русскоязычных симлинков и закладок в Caja.
+
+    k8s-install — установка Kubernetes и траблшутинг (Flannel, TLS, порты и др.).
+
+    ad-fix — диагностика и исправление интеграции с Active Directory (SSSD/Winbind, id_max, кэш).
+
+🔗 Repository: github.com/hagegata/linux-automation
+📈 Как я учусь
+
+Осваиваю DevOps-стек параллельно и по спирали: беру тему, углубляюсь, возвращаюсь к пройденному с новым контекстом.
+text
+
 ┌──────────────────────────────────────────────────────────┐
 │                  DevOps / Linux Engineering              │
 ├──────────────────────────────────────────────────────────┤
 │   Linux Administration    Docker / Compose               │
 │   Bash / Python           Kubernetes / kubeadm           │
 │   Git / GitHub            CI/CD / GitHub Actions         │
-│   Networking              Prometheus / Grafana           │
-│   Kerberos / SSSD         Zabbix / OVAL                  │
-│   PostgreSQL / Redis      IaC / Cloud / DevSecOps        │
+│   Networking              Jenkins / Pipeline             │
+│   Kerberos / SSSD         Prometheus / Grafana           │
+│   PostgreSQL / Redis      Alertmanager / Zabbix          │
+│   IaC / Cloud / DevSecOps                                │
 ├──────────────────────────────────────────────────────────┤
-│       Темы изучаю в связке, возвращаюсь и углубляю       |
+│       Темы изучаю в связке, возвращаюсь и углубляю       │
 └──────────────────────────────────────────────────────────┘
-```

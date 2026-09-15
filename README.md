@@ -161,7 +161,6 @@ flowchart LR
         Alert[Alertmanager]
         Graf[Grafana]
     end
-
     Linux --> Automation
     Automation --> Containers
     Containers --> CICD
@@ -171,8 +170,11 @@ flowchart LR
     Core -.-> Docker
     Net -.-> K8s
     Fs -.-> Prom
+```
 
-    📚 Учебный план и прогресс
+---
+
+# 📚 Учебный план и прогресс
 
 Системный план изучения DevOps-инструментов. Отмечаю пройденные модули.
 Модуль	Часы	Прогресс	Статус

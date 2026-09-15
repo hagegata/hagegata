@@ -370,6 +370,7 @@ flowchart LR
 ---
 
 ## 📊 [monitoring](https://github.com/hagegata/monitoring)
+[![Monitoring CI](https://github.com/hagegata/monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/hagegata/monitoring/actions/workflows/ci.yml)
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)

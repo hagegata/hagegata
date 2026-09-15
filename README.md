@@ -214,7 +214,15 @@ flowchart LR
 
 ## 🏢 Enterprise Automation & Security
 
-**Bash · Zabbix · OVAL · SSSD/Kerberos · ФСТЭК**
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![Zabbix](https://img.shields.io/badge/Zabbix-D40000?style=flat-square&logo=zabbix&logoColor=white)
+![OVAL](https://img.shields.io/badge/OVAL-333333?style=flat-square&logo=linux&logoColor=white)
+![ScanOval](https://img.shields.io/badge/ScanOval-0055A4?style=flat-square&logo=security&logoColor=white)
+![Kerberos](https://img.shields.io/badge/Kerberos-333333?style=flat-square&logo=linux&logoColor=white)
+![SSSD](https://img.shields.io/badge/SSSD-CC0000?style=flat-square&logo=linux&logoColor=white)
+![Active Directory](https://img.shields.io/badge/Active%20Directory-0078D4?style=flat-square&logo=windows&logoColor=white)
+![ALT Linux](https://img.shields.io/badge/ALT%20Linux-1E3D6C?style=flat-square&logo=linux&logoColor=white)
+![ФСТЭК](https://img.shields.io/badge/ФСТЭК-0055A4?style=flat-square&logo=shield&logoColor=white)
 
 *Коммерческий проект — Законодательное Собрание Кировской области*
 
@@ -235,7 +243,13 @@ flowchart LR
 
 ## 🛠️ Immich Infrastructure Rescue
 
-**Linux · Docker/Snap · PostgreSQL · Bash**
+![Linux](https://img.shields.io/badge/Linux-333333?style=flat-square&logo=linux&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+
+*Спасение и оптимизация медиа-сервера: перенос 390 ГБ данных, устранение schema drift и OOM Killer*
 
 ### Проблема
 Сервис падал из-за OOM Killer, переполнения корневого раздела и проблем со схемой PostgreSQL после обновлений.
@@ -254,7 +268,14 @@ flowchart LR
 
 ## 🐳 Docker & Docker Compose
 
-**Docker · Dockerfile · Multi-stage Build · Compose · Volumes · Networks · Healthcheck**
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Multi-stage](https://img.shields.io/badge/Multi--stage-Build-blue?style=flat-square)
+![Volumes](https://img.shields.io/badge/Volumes-blue?style=flat-square)
+![Networks](https://img.shields.io/badge/Networks-blue?style=flat-square)
+![Healthcheck](https://img.shields.io/badge/Healthcheck-blue?style=flat-square)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat-square&logo=aqua&logoColor=white)
+![Cosign](https://img.shields.io/badge/Cosign-5C2D91?style=flat-square&logo=sigstore&logoColor=white)
 
 *Практическое применение контейнеризации в pet-проектах и производственных сценариях*
 
@@ -272,9 +293,13 @@ flowchart LR
 
 ---
 
-## 🔧 Git: управление версиями и практическое применение
+## 🔧 Git: управление версиями
 
-**Git · GitHub · Branching · Merge/Rebase · Workflow**
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![Branching](https://img.shields.io/badge/Branching-blue?style=flat-square)
+![Rebase](https://img.shields.io/badge/Rebase-blue?style=flat-square)
+![Workflow](https://img.shields.io/badge/Workflow-blue?style=flat-square)
 
 *Система контроля версий, используемая во всех проектах*
 

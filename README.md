@@ -83,6 +83,7 @@
 ---
 
 ## 📊 Мониторинг и информационная безопасность
+[![Monitoring CI](https://github.com/hagegata/monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/hagegata/monitoring/actions/workflows/ci.yml)
 
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)

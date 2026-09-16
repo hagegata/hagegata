@@ -2,18 +2,35 @@
 
 ### Linux Engineer / System Administrator / Junior DevOps
 
+![myflask CI](https://github.com/hagegata/myflask/actions/workflows/docker-build.yml/badge.svg)
+![monitoring CI](https://github.com/hagegata/monitoring/actions/workflows/ci.yml/badge.svg)
+
 Системный администратор Linux с коммерческим опытом автоматизации рабочих мест, мониторинга, сопровождения Linux/Windows-инфраструктуры и интеграции Linux с Active Directory.
 
-Развиваюсь в сторону Linux Engineering и Junior DevOps: изучаю Docker, Kubernetes, Ansible, CI/CD, Prometheus и Grafana. В репозиториях собраны **реальные рабочие кейсы** и **учебные лабораторные стенды** — они помечены явно.
+Развиваюсь в сторону Linux Engineering и Junior DevOps: Docker, Kubernetes, Ansible, CI/CD, Prometheus, Grafana. В репозиториях — **реальные рабочие кейсы** и **учебные лабораторные стенды** (помечены явно).
 
 📄 **Резюме:** [hh.ru](https://hh.ru/resume/3035d41cff10607a400039ed1f32467a416956)
 
 ---
 
-## Основные навыки
+## 🧰 Основные навыки
+
+![Linux](https://img.shields.io/badge/Linux-333333?style=flat-square&logo=linux&logoColor=white)
+![ALT Linux](https://img.shields.io/badge/ALT%20Linux-1E3D6C?style=flat-square&logo=linux&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![Zabbix](https://img.shields.io/badge/Zabbix-D40000?style=flat-square&logo=zabbix&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
 - **Linux:** ALT Linux, Ubuntu, Astra Linux
-- **Скрипты и автоматизация:** Bash, Python, Ansible (Jinja2, Vault)
+- **Автоматизация:** Bash, Python, Ansible (Jinja2, Vault)
 - **Мониторинг:** Zabbix, UserParameter, OVAL/ScanOval, Prometheus, Grafana, Alertmanager
 - **Интеграция с AD:** SSSD, Kerberos, SMB/CIFS
 - **Контейнеры:** Docker, Docker Compose, containerd
@@ -27,12 +44,20 @@
 
 Реальные задачи из Законодательного Собрания Кировской области и Ростелекома.
 
-### Enterprise Automation & Security
+### 🏢 Enterprise Automation & Security
+
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![Zabbix](https://img.shields.io/badge/Zabbix-D40000?style=flat-square&logo=zabbix&logoColor=white)
+![OVAL](https://img.shields.io/badge/OVAL-333333?style=flat-square&logo=linux&logoColor=white)
+![Kerberos](https://img.shields.io/badge/Kerberos-333333?style=flat-square&logo=linux&logoColor=white)
+![SSSD](https://img.shields.io/badge/SSSD-CC0000?style=flat-square&logo=linux&logoColor=white)
+![ALT Linux](https://img.shields.io/badge/ALT%20Linux-1E3D6C?style=flat-square&logo=linux&logoColor=white)
+![ФСТЭК](https://img.shields.io/badge/ФСТЭК-0055A4?style=flat-square&logo=shield&logoColor=white)
 
 **Задача:** сократить время подготовки рабочих мест ALT Linux и внедрить аудит по ФСТЭК.
 
 **Решение:**
-- Bash-скрипт автоматизированного развёртывания: установка ПО, настройка Zabbix Agent, GLPI, UrBackup, OVAL-сканирования.
+- Bash-скрипт автоматизированного развёртывания: установка ПО, Zabbix Agent, GLPI, UrBackup, OVAL-сканирование.
 - Мониторинг в Zabbix 7.0: UserParameter, авторегистрация, OVAL-метрики, триггеры.
 - Интеграция с Active Directory через SSSD/Kerberos, автомонтирование SMB.
 - Диагностический Bash-инструмент для AD/SSSD.
@@ -41,7 +66,12 @@
 
 ---
 
-### Immich Infrastructure Rescue
+### 🛠️ Immich Infrastructure Rescue
+
+![Linux](https://img.shields.io/badge/Linux-333333?style=flat-square&logo=linux&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 
 **Задача:** стабилизировать сервис Immich, который падал из-за OOM Killer, заполнения диска и schema drift PostgreSQL.
 
@@ -58,9 +88,15 @@
 
 ## 🧪 Lab projects
 
-Учебные стенды. Не являются production-опытом — это практика технологий.
+Учебные стенды — практика технологий, не production-опыт.
 
 ### 🐍 [myflask](https://github.com/hagegata/myflask) — Docker + CI/CD
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
 
 Flask + Redis. Dockerfile с multi-stage build, Compose, healthcheck.
 CI в GitHub Actions: matrix-тесты (Python 3.10–3.12), cache, Trivy, Cosign, публикация в GHCR.
@@ -69,11 +105,19 @@ CI в GitHub Actions: matrix-тесты (Python 3.10–3.12), cache, Trivy, Cosi
 
 ### 📊 [monitoring](https://github.com/hagegata/monitoring) — стек наблюдаемости
 
-Prometheus + Node Exporter + Grafana + Alertmanager. Правило `NodeDown`, полный цикл алерта (Firing → Inactive). Дашборд Node Metrics.
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+![Alertmanager](https://img.shields.io/badge/Alertmanager-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Node Exporter](https://img.shields.io/badge/Node%20Exporter-333333?style=flat-square&logo=prometheus&logoColor=white)
+
+Prometheus + Node Exporter + Grafana + Alertmanager. Правило `NodeDown`, полный цикл алерта (Firing → Inactive). Дашборд Node Metrics (CPU, память, диск, Load Average).
 
 ---
 
 ### ⚙️ [ansible-lab](https://github.com/hagegata/ansible-lab) — IaC на Ansible
+
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=flat-square&logo=jinja&logoColor=white)
 
 Inventory, роли, Jinja2-шаблоны, handlers, Vault. Подтверждена идемпотентность (`changed=0` при повторном запуске).
 
@@ -81,19 +125,87 @@ Inventory, роли, Jinja2-шаблоны, handlers, Vault. Подтвержд�
 
 ### ⚙️ [jenkins-lab](https://github.com/hagegata/jenkins-lab) — Jenkins pipeline
 
-Jenkins в Docker, pipeline из 4 стадий. Docker-команды через docker.sock.
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+Jenkins в Docker, pipeline из 4 стадий (Checkout → Build → Test → Cleanup). Docker-команды через docker.sock.
 
 ---
 
 ### ☸️ [k8s-basics](https://github.com/hagegata/k8s-basics) — учебный Kubernetes-стенд
 
-Одноузловой кластер на ALT Linux (kubeadm + containerd). Манифесты Pod/Deployment/Service/ConfigMap/Secret/StatefulSet/PV-PVC. Разбор проблем CNI.
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![kubeadm](https://img.shields.io/badge/kubeadm-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![containerd](https://img.shields.io/badge/containerd-575757?style=flat-square&logo=containerd&logoColor=white)
+
+Одноузловой кластер на ALT Linux (kubeadm + containerd). Манифесты Pod/Deployment/Service/ConfigMap/Secret/StatefulSet/PV-PVC. Разбор проблем CNI (Flannel, Calico).
 
 ---
 
 ### 🛠️ [linux-automation](https://github.com/hagegata/linux-automation) — Bash-скрипты
 
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![ALT Linux](https://img.shields.io/badge/ALT%20Linux-1E3D6C?style=flat-square&logo=linux&logoColor=white)
+![CIFS](https://img.shields.io/badge/CIFS-555555?style=flat-square&logo=linux&logoColor=white)
+![Kerberos](https://img.shields.io/badge/Kerberos-333333?style=flat-square&logo=linux&logoColor=white)
+
 autoinstall, cifs-mount, k8s-install, ad-fix — с документацией и траблшутингом.
+
+---
+
+## 🗺️ Карта технологий
+
+```mermaid
+flowchart LR
+    subgraph Linux["🖥️ Linux"]
+        direction TB
+        Core[Ядро и системные вызовы]
+        Net[Сети и маршрутизация]
+        Fs[Файловые системы]
+    end
+
+    subgraph Automation["⚙️ Автоматизация"]
+        direction TB
+        Bash[Bash / Python]
+        Ansible[Ansible / Jinja2]
+        Git[Git / GitHub]
+    end
+
+    subgraph Containers["📦 Контейнеры"]
+        direction TB
+        Docker[Docker / Compose]
+    end
+
+    subgraph CICD["🔁 CI/CD"]
+        direction TB
+        GHA[GitHub Actions]
+        Jenkins[Jenkins]
+    end
+
+    subgraph Observability["📊 Наблюдаемость"]
+        direction TB
+        Prom[Prometheus]
+        Alert[Alertmanager]
+        Graf[Grafana]
+    end
+
+    Linux --> Automation
+    Automation --> Containers
+    Containers --> CICD
+    CICD --> Observability
+
+    Core -.-> Docker
+    Net -.-> Observability
+    Fs -.-> Prom
+```
+
+---
+
+## 🎓 Курсы
+
+- Docker — Минцифры (2026)
+- Linux — Минцифры (2026)
+- Администрирование ALT Linux — SIBINFOCENTER (2025)
 
 ---
 

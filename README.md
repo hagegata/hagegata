@@ -234,7 +234,6 @@ flowchart LR
 
 ## 📬 Контакты
 
-- GitHub: [github.com/hagegata](https://github.com/hagegata)
 - Telegram: @Kuznetsov_E_R
 - Email: fradik.kuznezov@mail.ru
 - Резюме: [hh.ru](https://hh.ru/resume/3035d41cff10607a400039ed1f32467a416956)

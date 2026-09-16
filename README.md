@@ -29,6 +29,7 @@
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white)
 
 - **Linux:** ALT Linux, Ubuntu, Astra Linux
 - **Автоматизация:** Bash, Python, Ansible (Jinja2, Vault)
@@ -37,7 +38,7 @@
 - **Контейнеры:** Docker, Docker Compose, containerd
 - **CI/CD:** GitHub Actions, Jenkins
 - **Базы данных:** PostgreSQL, Redis
-- **Kubernetes:** kubeadm, kubectl, манифесты *(базовый уровень)*
+- **Kubernetes:** kubeadm, kubectl, манифесты, Helm *(базовый уровень)*
 
 ---
 
@@ -109,7 +110,18 @@ CI в GitHub Actions: matrix-тесты (Python 3.10–3.12), cache, Trivy, Cosi
 ![Alertmanager](https://img.shields.io/badge/Alertmanager-E6522C?style=flat-square&logo=prometheus&logoColor=white)
 ![Node Exporter](https://img.shields.io/badge/Node%20Exporter-333333?style=flat-square&logo=prometheus&logoColor=white)
 
-Prometheus + Node Exporter + Grafana + Alertmanager. Правило `NodeDown`: проверен полный цикл правила `Inactive → Pending → Firing → Inactive` и отправка алерта в Alertmanager. Дашборд Node Metrics (CPU, память, диск, Load Average).
+Prometheus + Node Exporter + Grafana + Alertmanager. Правило `NodeDown`: проверен полный цикл `Inactive → Pending → Firing → Inactive`. Дашборд Node Metrics (CPU, память, диск, Load Average).
+
+---
+
+### ⚙️ [k8s-helm](https://github.com/hagegata/k8s-helm) — Helm-чарт для Kubernetes
+
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+
+Helm-чарт для Flask + Redis. Параметризация через `values.yaml`, деплой в kind-кластер. Проверена работа Service Discovery, Redis-счётчика и обновление релиза через `helm upgrade`.
 
 ---
 
@@ -181,6 +193,12 @@ flowchart LR
         Jenkins[Jenkins]
     end
 
+    subgraph Orchestration["☸️ Оркестрация"]
+        direction TB
+        K8s[Kubernetes / kubeadm]
+        Helm[Helm]
+    end
+
     subgraph Observability["📊 Наблюдаемость"]
         direction TB
         Prom[Prometheus]
@@ -191,7 +209,8 @@ flowchart LR
     Linux --> Automation
     Automation --> Containers
     Containers --> CICD
-    CICD --> Observability
+    CICD --> Orchestration
+    Orchestration --> Observability
 ```
 
 ---
@@ -206,7 +225,7 @@ flowchart LR
 
 ## 📚 Сейчас изучаю
 
-- **Kubernetes:** Helm, Ingress, диагностика сетевого взаимодействия и CNI
+- **Kubernetes:** Ingress, диагностика сетевого взаимодействия и CNI
 - **Terraform:** IaC для облаков
 - **DevSecOps:** безопасность контейнеров и CI/CD
 - **Loki:** логи в стеке мониторинга

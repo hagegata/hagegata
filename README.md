@@ -91,6 +91,8 @@
 
 Учебные стенды — практика технологий, не production-опыт.
 
+---
+
 ### 🚀 [devops-fullstack-pet](https://github.com/hagegata/devops-fullstack-pet) — Fullstack DevOps-проект
 
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)

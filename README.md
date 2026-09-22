@@ -91,7 +91,7 @@
 
 Учебные стенды — практика технологий, не production-опыт.
 
---
+
 
 ### 🚀 [devops-fullstack-pet](https://github.com/hagegata/devops-fullstack-pet) — Fullstack DevOps-проект
 

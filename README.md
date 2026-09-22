@@ -91,6 +91,47 @@
 
 Учебные стенды — практика технологий, не production-опыт.
 
+### 🚀 [devops-fullstack-pet](https://github.com/hagegata/devops-fullstack-pet) — Fullstack DevOps-проект
+
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+
+**Единый пет-проект**, объединяющий полный DevOps-стек — от кода до мониторинга.
+
+**Приложение:** URL shortener (Flask API + PostgreSQL + Redis).
+
+**Слои проекта:**
+- **Backend:** Flask, REST API (`/health`, `/shorten`, `/<code>`), `psycopg2`, `RealDictCursor`, SQL-плейсхолдеры против инъекций.
+- **Docker:** multi-stage build, non-root user, `.dockerignore`, образ ~134 МБ.
+- **Docker Compose:** три сервиса, `healthcheck` + `depends_on: service_healthy`, named volume для PostgreSQL, обход конфликта портов (`network_mode: host`).
+- **PostgreSQL:** персистентное хранилище, volume `postgres_data`, проверен тест «переживает перезапуск контейнеров».
+- **Redis:** кэш (порт 6380), healthcheck.
+- **Nginx:** reverse proxy — точка входа, проксирование `/api/*` → backend. *(в работе)*
+- **Kubernetes (kind):** Deployment/Service/ConfigMap/Secret/PVC, Helm-чарт для всего стека. *(в работе)*
+- **Terraform:** создание kind-кластера как код (провайдер `tehcyx/kind`). *(в работе)*
+- **Ansible:** установка Helm и monitoring stack. *(в работе)*
+- **CI/CD:** GitHub Actions — сборка, Trivy-скан, push в GHCR, деплой. *(в работе)*
+- **Мониторинг:** Prometheus + Grafana + Alertmanager. *(в работе)*
+
+**Проверенные сценарии:**
+- Полный цикл: create → redirect (302) → not found (404).
+- Healthcheck для всех сервисов.
+- Персистентность данных после `docker-compose down && docker-compose up`.
+
+> Объединяет опыт из `myflask`, `monitoring`, `k8s-helm`, `ansible-lab` и Terraform в один сквозной проект.
+
+---
+
 ### 🐍 [myflask](https://github.com/hagegata/myflask) — Docker + CI/CD
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)

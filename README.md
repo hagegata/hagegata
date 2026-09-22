@@ -254,6 +254,13 @@ flowchart LR
     Containers --> CICD
     CICD --> Orchestration
     Orchestration --> Observability
+
+    Linux -.-> Pet[🚀 devops-fullstack-pet]
+    Automation -.-> Pet
+    Containers -.-> Pet
+    CICD -.-> Pet
+    Orchestration -.-> Pet
+    Observability -.-> Pet
 ```
 
 ---
@@ -265,13 +272,13 @@ flowchart LR
 - Администрирование ALT Linux — SIBINFOCENTER (2025)
 
 ---
-
 ## 📚 Сейчас изучаю
 
-- **Kubernetes:** Ingress, диагностика сетевого взаимодействия и CNI
-- **Terraform:** IaC для облаков
-- **DevSecOps:** безопасность контейнеров и CI/CD
-- **Loki:** логи в стеке мониторинга
+- **Полный DevOps-цикл:** сквозной проект [devops-fullstack-pet](https://github.com/hagegata/devops-fullstack-pet) — Docker Compose → Kubernetes (kind) → Helm → Terraform → Ansible → CI/CD → мониторинг.
+- **Kubernetes:** Ingress, диагностика сетевого взаимодействия и CNI.
+- **Terraform:** IaC для облаков, провайдеры `kind` и Yandex Cloud.
+- **DevSecOps:** безопасность контейнеров и CI/CD.
+- **Loki:** логи в стеке мониторинга.
 
 ---
 

@@ -91,7 +91,7 @@
 
 Учебные стенды — практика технологий, не production-опыт.
 
-
+---
 
 ### 🚀 [devops-fullstack-pet](https://github.com/hagegata/devops-fullstack-pet) — Fullstack DevOps-проект
 
@@ -110,25 +110,28 @@
 
 **Единый пет-проект**, объединяющий полный DevOps-стек — от кода до мониторинга.
 
-**Приложение:** URL shortener (Flask API + PostgreSQL + Redis).
+**Приложение:** URL shortener (Flask API + PostgreSQL + Redis + HTML/CSS/JS).
 
 **Слои проекта:**
 - **Backend:** Flask, REST API (`/health`, `/shorten`, `/<code>`), `psycopg2`, `RealDictCursor`, SQL-плейсхолдеры против инъекций.
+- **Frontend:** HTML + CSS + JS, форма создания коротких ссылок через `fetch` на `/api/shorten`.
 - **Docker:** multi-stage build, non-root user, `.dockerignore`, образ ~134 МБ.
-- **Docker Compose:** три сервиса, `healthcheck` + `depends_on: service_healthy`, named volume для PostgreSQL, обход конфликта портов (`network_mode: host`).
+- **Docker Compose:** четыре сервиса (backend, PostgreSQL, Redis, Nginx), `healthcheck` + `depends_on: service_healthy`, named volume для PostgreSQL, обход конфликта портов (`network_mode: host`).
 - **PostgreSQL:** персистентное хранилище, volume `postgres_data`, проверен тест «переживает перезапуск контейнеров».
 - **Redis:** кэш (порт 6380), healthcheck.
-- **Nginx:** reverse proxy — точка входа, проксирование `/api/*` → backend. *(в работе)*
-- **Kubernetes (kind):** Deployment/Service/ConfigMap/Secret/PVC, Helm-чарт для всего стека. *(в работе)*
+- **Nginx:** reverse proxy — единая точка входа на порту 8080, проксирование `/api/*` → backend (срез префикса через `proxy_pass .../`), отдача статики (HTML/CSS/JS), правильные MIME-типы через `include mime.types`.
+- **Kubernetes (kind):** backend (Deployment + ClusterIP Service), PostgreSQL (StatefulSet + headless Service + PVC 1Gi через `local-path-provisioner`), Secret для креденшелов БД. В работе: Redis, Nginx, ConfigMap, NodePort. *(частично)*
 - **Terraform:** создание kind-кластера как код (провайдер `tehcyx/kind`). *(в работе)*
 - **Ansible:** установка Helm и monitoring stack. *(в работе)*
 - **CI/CD:** GitHub Actions — сборка, Trivy-скан, push в GHCR, деплой. *(в работе)*
 - **Мониторинг:** Prometheus + Grafana + Alertmanager. *(в работе)*
 
 **Проверенные сценарии:**
-- Полный цикл: create → redirect (302) → not found (404).
-- Healthcheck для всех сервисов.
+- Полный цикл через curl и браузер: create → redirect (302) → not found (404).
+- Healthcheck для всех сервисов Compose.
 - Персистентность данных после `docker-compose down && docker-compose up`.
+- Полный цикл внутри K8s-кластера: `POST /shorten` → запись в PostgreSQL → `SELECT` показывает данные.
+- Rolling restart Deployment без простоя (`kubectl rollout restart`).
 
 > Объединяет опыт из `myflask`, `monitoring`, `k8s-helm`, `ansible-lab` и Terraform в один сквозной проект.
 
@@ -272,10 +275,12 @@ flowchart LR
 - Администрирование ALT Linux — SIBINFOCENTER (2025)
 
 ---
+
 ## 📚 Сейчас изучаю
 
 - **Полный DevOps-цикл:** сквозной проект [devops-fullstack-pet](https://github.com/hagegata/devops-fullstack-pet) — Docker Compose → Kubernetes (kind) → Helm → Terraform → Ansible → CI/CD → мониторинг.
-- **Kubernetes:** Ingress, диагностика сетевого взаимодействия и CNI.
+- **Kubernetes:** StatefulSet, PVC, headless Service (backend + PostgreSQL в kind уже развёрнуты). Дальше — ConfigMap, NodePort, Ingress.
+- **Helm:** упаковка K8s-стека в чарт с `values.yaml`.
 - **Terraform:** IaC для облаков, провайдеры `kind` и Yandex Cloud.
 - **DevSecOps:** безопасность контейнеров и CI/CD.
 - **Loki:** логи в стеке мониторинга.

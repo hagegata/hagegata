@@ -113,7 +113,7 @@
 **Приложение:** URL shortener (Flask API + PostgreSQL + Redis + HTML/CSS/JS).
 
 **Слои проекта:**
-- **Backend:** Flask, REST API (`/health`, `/shorten`, `/<code>`), `psycopg2`, `RealDictCursor`, SQL-плейсхолдеры против инъекций.
+- **Backend:** Flask, REST API (`/health`, `/shorten`, `/<code>`), `psycopg2`, `RealDictCursor`, SQL-плейсхолдеры.
 - **Frontend:** HTML + CSS + JS, форма создания коротких ссылок через `fetch` на `/api/shorten`.
 - **Docker:** multi-stage build, non-root user, `.dockerignore`, образ ~134 МБ.
 - **Docker Compose:** четыре сервиса (backend, PostgreSQL, Redis, Nginx), `healthcheck` + `depends_on: service_healthy`, named volume для PostgreSQL, обход конфликта портов (`network_mode: host`).

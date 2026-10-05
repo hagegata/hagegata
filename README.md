@@ -38,7 +38,7 @@
 - **Контейнеры:** Docker, Docker Compose, containerd
 - **CI/CD:** GitHub Actions, Jenkins
 - **Базы данных:** PostgreSQL, Redis
-- **Kubernetes:** kubeadm, kubectl, манифесты, Helm *(базовый уровень)*
+- **Kubernetes:** kubeadm, kubectl, манифесты, Deployment/StatefulSet/Service/ConfigMap/Secret/PVC, Helm 3 (charts, values, upgrade, rollback)
 
 ---
 
@@ -120,7 +120,8 @@
 - **PostgreSQL:** персистентное хранилище, volume `postgres_data`, проверен тест «переживает перезапуск контейнеров».
 - **Redis:** кэш (порт 6380), healthcheck.
 - **Nginx:** reverse proxy — единая точка входа на порту 8080, проксирование `/api/*` → backend (срез префикса через `proxy_pass .../`), отдача статики (HTML/CSS/JS), правильные MIME-типы через `include mime.types`.
-- **Kubernetes (kind):** backend (Deployment + ClusterIP Service), PostgreSQL (StatefulSet + headless Service + PVC 1Gi через `local-path-provisioner`), Secret для креденшелов БД. В работе: Redis, Nginx, ConfigMap, NodePort. *(частично)*
+- **Kubernetes (kind):** backend (Deployment + ClusterIP Service), PostgreSQL (StatefulSet + headless Service + PVC 1Gi через `local-path-provisioner`), Redis (Deployment + Service), Nginx (Deployment + NodePort Service + ConfigMap для nginx.conf), Secret для креденшелов БД, ConfigMap для статики frontend.
+- **Helm 3:** чарт `fullstack` со всем стеком — `Chart.yaml`, `values.yaml`, параметризованные шаблоны, `helm lint/template/install/upgrade`, `REVISION: 2`, `.Files.Get` для ConfigMap со статикой.
 - **Terraform:** создание kind-кластера как код (провайдер `tehcyx/kind`). *(в работе)*
 - **Ansible:** установка Helm и monitoring stack. *(в работе)*
 - **CI/CD:** GitHub Actions — сборка, Trivy-скан, push в GHCR, деплой. *(в работе)*
@@ -132,6 +133,8 @@
 - Персистентность данных после `docker-compose down && docker-compose up`.
 - Полный цикл внутри K8s-кластера: `POST /shorten` → запись в PostgreSQL → `SELECT` показывает данные.
 - Rolling restart Deployment без простоя (`kubectl rollout restart`).
+- `helm install` / `helm upgrade` (REVISION: 2) — атомарное обновление без простоя backend и postgres.
+- Полный цикл через Nginx в K8s: `POST http://nginx:8080/api/shorten` → 201.
 
 > Объединяет опыт из `myflask`, `monitoring`, `k8s-helm`, `ansible-lab` и Terraform в один сквозной проект.
 
@@ -279,9 +282,10 @@ flowchart LR
 ## 📚 Сейчас изучаю
 
 - **Полный DevOps-цикл:** сквозной проект [devops-fullstack-pet](https://github.com/hagegata/devops-fullstack-pet) — Docker Compose → Kubernetes (kind) → Helm → Terraform → Ansible → CI/CD → мониторинг.
-- **Kubernetes:** StatefulSet, PVC, headless Service (backend + PostgreSQL в kind уже развёрнуты). Дальше — ConfigMap, NodePort, Ingress.
-- **Helm:** упаковка K8s-стека в чарт с `values.yaml`.
+- **Kubernetes:** ConfigMap, NodePort, initContainer для порядка запуска. Развёрнут полный стек: backend, PostgreSQL, Redis, Nginx.
+- **Helm 3:** готов чарт `fullstack` со всем стеком. Дальше — `_helpers.tpl`, `helm rollback`, чарты для мониторинга.
 - **Terraform:** IaC для облаков, провайдеры `kind` и Yandex Cloud.
+- **Ansible:** установка Helm и monitoring stack.
 - **DevSecOps:** безопасность контейнеров и CI/CD.
 - **Loki:** логи в стеке мониторинга.
 
